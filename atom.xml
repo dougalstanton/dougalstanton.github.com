@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://dougalstanton.github.com/atom.xml" rel="self"/>
+  <link href="http://dougalstanton.github.com/"/>
+  <updated>2013-02-12T18:45:23+00:00</updated>
+  <id>http://dougalstanton.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Migration to Octopress etc]]></title>
+    <link href="http://dougalstanton.github.com/blog/2013/02/11/migration-to-octopress-etc/"/>
+    <updated>2013-02-11T19:43:00+00:00</updated>
+    <id>http://dougalstanton.github.com/blog/2013/02/11/migration-to-octopress-etc</id>
+    <content type="html"><![CDATA[<p>After the loss of my old blog, which I hope to at least salvage
+from the Wayback Machine at some point, I&#8217;ve moved over to using
+Octopress which has the built-in advantage of backed-up posts.</p>
+
+<p>I shouldn&#8217;t be able to lose it all again.</p>
+
+<p>(What is it about backing up data? You never do it until you&#8217;ve
+been burned once? I think that seems about right. Everyone is
+invincible until the first time they are laid low.)</p>
+
+<p>Soon I will get my domain redirected here, so while things are
+interrupted they will not be interrupted forever.</p>
+]]></content>
+  </entry>
+  
+</feed>
