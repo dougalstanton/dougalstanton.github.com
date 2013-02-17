@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: programming | Looking Out To Sea]]></title>
+  <link href="http://dougalstanton.github.com/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://dougalstanton.github.com/"/>
+  <updated>2013-02-17T20:23:25+00:00</updated>
+  <id>http://dougalstanton.github.com/</id>
+  <author>
+    <name><![CDATA[Dougal Stanton]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Salvaging the Challenge]]></title>
+    <link href="http://dougalstanton.github.com/blog/2013/02/17/salvaging-the-challenge/"/>
+    <updated>2013-02-17T18:57:00+00:00</updated>
+    <id>http://dougalstanton.github.com/blog/2013/02/17/salvaging-the-challenge</id>
+    <content type="html"><![CDATA[<p>Since losing the old blog host I've been trying to reclaim what I could
+from the Wayback Machine, particularly archives of Helen's blog.</p>
+
+<p>There aren't enough entries saved to cover the whole year, even if we
+ignore the entries which aren't part of the challenge. Which basically
+means we've lost the record of the challenge and frankly I'm gutted by
+this state of affairs.</p>
+
+<p>I have 67 saved entries and there should be about 190, though some of
+those will be links to the same article. This is still a lot of missing
+posts.</p>
+
+<p>At this point I'm beginning to wonder if saving those 67 is worth it.
+I'm quite demoralised.</p>
+]]></content>
+  </entry>
+  
+</feed>
