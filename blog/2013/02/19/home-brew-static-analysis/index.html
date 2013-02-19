@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Looking Out To Sea</title>
+  <title>Home-brew static analysis for fun and profit - Looking Out To Sea</title>
   <meta name="author" content="Dougal Stanton">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dougalstanton.github.com/">
+  <link rel="canonical" href="http://dougalstanton.github.com/blog/2013/02/19/home-brew-static-analysis/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -60,15 +60,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/02/19/home-brew-static-analysis/">Home-brew Static Analysis for Fun and Profit</a></h1>
+      <h1 class="entry-title">Home-brew Static Analysis for Fun and Profit</h1>
     
     
       <p class="meta">
@@ -91,7 +88,7 @@
   </header>
 
 
-  <div class="entry-content"><p>I&#8217;ve had recent success with writing test tools for use in-house. We have a system which greatly abuses the C preprocessor to create (at build-time) sets of translations and default settings for different languages and particular customers.</p>
+<div class="entry-content"><p>I&#8217;ve had recent success with writing test tools for use in-house. We have a system which greatly abuses the C preprocessor to create (at build-time) sets of translations and default settings for different languages and particular customers.</p>
 
 <p>Due to the limitations of anything built with the preprocessor there isn&#8217;t anything even remotely like type checking. In order to truly spot any problems in the translations you have to build the binary (and potentially even <em>run</em> it). Which means we need a single binary which includes every single customer variant and linguistic complexity, which will take an age to build; or we have to build have a dozen variants to ensure that adding one thing doesn&#8217;t cause mayhem.</p>
 
@@ -107,77 +104,16 @@
 
 <p>Thankfully a test runner called Test Framework came to the rescue, promising to write the XML for me. I converted the format and results of my tests into some structure it could understand and let it do the hard work. I got prettier command line output and XML files that Jenkins could parse, but lost one-pass testing. I can live with this; the tests still run in about six seconds which is a considerable saving on a twenty minute build.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/18/five-minutes-everyday/">Five Minutes Everyday to Turn the World Upside Down</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Dougal Stanton</span></span>
 
-<time datetime="2013-02-18T18:59:00+00:00" pubdate data-updated="true">Monday, 18 February 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve been doing capoeira now for about two years I think, and
-one thing that hasn&#8217;t really changed in that time is my complete
-inability to do a handstand or a cartwheel.</p>
-
-<p>Since the beginning of the year (you know, midway through January)
-I&#8217;ve had an alarm on my phone that buzzes at 6.30pm <em>every single day</em>
-and tells me I have to practise. Nearly every single day since I started I
-have set aside five minutes to practise. I set a timer so that I don&#8217;t
-do 3 minutes then decide that I&#8217;m probably done, and so that I stop at
-5 minutes. The point is that it&#8217;s not supposed to be a burden or a
-long gruelling exercise regime.</p>
-
-<p>Five minutes practice every day &#8212; throwing myself up against a bare
-wall initially, but slowly becoming more independent &#8212; has brought
-about a massive change. I&#8217;m still not capable of busting out amazing
-inverted moves but if I&#8217;d known two years ago that I could be where I
-am now with only month of this I would be shocked.</p>
-
-<p>I&#8217;ll continue to be shocked and I hope the improvements will continue
-too.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/17/salvaging-the-challenge/">Salvaging the Challenge</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -189,87 +125,38 @@ too.</p>
   
 
 
-<time datetime="2013-02-17T18:57:00+00:00" pubdate data-updated="true">Sunday, 17 February 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Since losing the old blog host I&#8217;ve been trying to reclaim what I could
-from the Wayback Machine, particularly archives of Helen&#8217;s blog.</p>
-
-<p>There aren&#8217;t enough entries saved to cover the whole year, even if we
-ignore the entries which aren&#8217;t part of the challenge. Which basically
-means we&#8217;ve lost the record of the challenge and frankly I&#8217;m gutted by
-this state of affairs.</p>
-
-<p>I have 67 saved entries and there should be about 190, though some of
-those will be links to the same article. This is still a lot of missing
-posts.</p>
-
-<p>At this point I&#8217;m beginning to wonder if saving those 67 is worth it.
-I&#8217;m quite demoralised.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2013-02-19T22:28:00+00:00" pubdate data-updated="true">Tuesday, 19 February 2013</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/11/migration-to-octopress-etc/">Migration to Octopress Etc</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
+    <a class='category' href='/blog/categories/haskell/'>haskell</a>, <a class='category' href='/blog/categories/programming-/'>programming,</a>
+  
+</span>
 
 
-<time datetime="2013-02-11T19:43:00+00:00" pubdate data-updated="true">Monday, 11 February 2013</time>
-        
-      </p>
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>After the loss of my old blog, which I hope to at least salvage
-from the Wayback Machine at some point, I&#8217;ve moved over to using
-Octopress which has the built-in advantage of backed-up posts.</p>
-
-<p>I shouldn&#8217;t be able to lose it all again.</p>
-
-<p>(What is it about backing up data? You never do it until you&#8217;ve
-been burned once? I think that seems about right. Everyone is
-invincible until the first time they are laid low.)</p>
-
-<p>Soon I will get my domain redirected here, so while things are
-interrupted they will not be interrupted forever.</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://dougalstanton.github.com/blog/2013/02/19/home-brew-static-analysis/" data-via="" data-counturl="http://dougalstanton.github.com/blog/2013/02/19/home-brew-static-analysis/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/18/five-minutes-everyday/" title="Previous Post: Five minutes everyday to turn the world upside down">&laquo; Five minutes everyday to turn the world upside down</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -302,6 +189,7 @@ interrupted they will not be interrupted forever.</p>
 
   
 </aside>
+
 
     </div>
   </div>
