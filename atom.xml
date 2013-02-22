@@ -4,7 +4,7 @@
   <title><![CDATA[Looking Out To Sea]]></title>
   <link href="http://dougalstanton.github.com/atom.xml" rel="self"/>
   <link href="http://dougalstanton.github.com/"/>
-  <updated>2013-02-19T22:35:23+00:00</updated>
+  <updated>2013-02-22T13:26:14+00:00</updated>
   <id>http://dougalstanton.github.com/</id>
   <author>
     <name><![CDATA[Dougal Stanton]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress uses a non-conformant Markdown processor as standard]]></title>
+    <link href="http://dougalstanton.github.com/blog/2013/02/22/non-conformant-markdown-processor/"/>
+    <updated>2013-02-22T12:40:00+00:00</updated>
+    <id>http://dougalstanton.github.com/blog/2013/02/22/non-conformant-markdown-processor</id>
+    <content type="html"><![CDATA[<p>I have just discovered, while adding an <a href="http://dougalstanton.github.com/about">about page</a> to this blog, that the standard Markdown processor used by Octopress (called RDiscount) doesn&#8217;t conform to the Markdown standard. I mean in particular the reference-style links, which I happen to be quite fond of. You should be able to include <code>&lt;</code> and <code>&gt;</code> characters around URLs like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[eg]: &lt;http://www.example.com&gt; "The canonical example page"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Instead of stripping out these optional characters RDiscount passes them on and they get translated into HTML entities (<code>&amp;lt;</code>) which causes further steps in the chain to choke. Ultimately you end up with a very broken web page.</p>
+
+<p>A simple <code>An [example link] [eg].</code> turns into the following mess &#8212; oh dear.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;p&gt;</span>An <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&amp;lt;http://www.example.com</span><span class="nt">&gt;</span><span class="ni">&amp;#8221;</span> title=<span class="ni">&amp;#8221;</span>The canonical example page<span class="ni">&amp;#8221;</span>&gt;example link<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Notice how the opening quote never gets closed? The rest of that paragraph is the <code>href</code> for that link! So I will have to learn to omit the angle brackets:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>[eg]: http://www.example.com &quot;The canonical example page&quot;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>PS. While writing <em>this</em> post I discovered that Pygments.rb (which does syntax highlighting for Octopress) doesn&#8217;t support Markdown as a highlightable language (fair enough, can&#8217;t cover everything) &#8212; but also that it crashes if you name a language it doesn&#8217;t know. Not having a good day.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'> ``` markdown I will kill your highlighter
+</span><span class='line'> [eg]: <span class="nt">&lt;http:</span><span class="err">//</span><span class="na">www</span><span class="err">.</span><span class="na">example</span><span class="err">.</span><span class="na">com</span><span class="nt">&gt;</span> &quot;The canonical example page&quot;
+</span><span class='line'> ```
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Home-brew static analysis for fun and profit]]></title>
