@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Looking Out To Sea</title>
+        <link>http://dougalstanton.net</link>
+        <description><![CDATA[A blog of sorts, unsorted.]]></description>
+        <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
+                   type="application/rss+xml" />
+        <lastBuildDate>Fri, 08 Mar 2013 00:00:00 UT</lastBuildDate>
+        <item>
+    <title>The unreasonable effectiveness of programming to Get Stuff Done&trade;</title>
+    <link>http://dougalstanton.net/posts/2013-03-08-unreasonable-effectiveness-of-code.html</link>
+    <description><![CDATA[<p>I’m not going to try convincing you of anything here, but instead to lay out the facts of what just happened.</p>
+<p>I have a list of “readers’ favourite books” that was the result of a popular vote a few years ago (in the Guardian I think, though that doesn’t matter at this point).</p>
+<p>I was also given a list of books for Kindle that someone at work had access to, by means which we shall not explore in detail. <em>wink</em></p>
+<p>I thought, I wonder how many of the favourite books are available? One list looked like this:</p>
+<pre><code>1 Pride and Prejudice Jane Austen
+2 The Lord of the Rings JRR Tolkien
+3 Jane Eyre Charlotte Bronte
+4 Harry Potter series JK Rowling
+5 To Kill a Mockingbird Harper Lee
+...</code></pre>
+<p>and the other looked like this:</p>
+<pre><code>Abagnale, Frank W. - Catch Me If You Can.mobi
+Abbot, Edwin - Flatland.mobi
+Abercrombie, Joe - First Law 01 - The Blade Itself.mobi
+Abercrombie, Joe - First Law 02 - Before They Are Hanged.mobi
+Abercrombie, Joe - First Law 03 - Last Argument of Kings.mobi
+...</code></pre>
+<p>A few minutes later I had a good answer on my screen. I won’t go into the details because they’re neither interesting or relevant. (I took the last word from the first list, which was the author’s surname, and searched for it in the other list. Any book which produced no candidates was dropped entirely. The rest were printed.) The point is that I had the means and the ability to very quickly answer the following question:</p>
+<blockquote>
+<p>Out of this list of 100 books and this list of 1400 books, which ones match up?</p>
+</blockquote>
+<p>The results were by no means perfect (this sample below shows the fuzzy nature of the output) but they were good enough to eyeball and say “yep, the book is there” or not.</p>
+<pre><code>5 To Kill a Mockingbird Harper Lee
+   Child, Lee - Jack Reacher 01 - Killing Floor.mobi
+   Child, Lee - Jack Reacher 02 - Die Trying.mobi
+   Child, Lee - Jack Reacher 03 - Tripwire.mobi
+   Child, Lee - Jack Reacher 04 - Running Blind.mobi
+   Child, Lee - Jack Reacher 05 - Echo Burning.mobi
+   Child, Lee - Jack Reacher 06 - Without Fail.mobi
+   Child, Lee - Jack Reacher 07 - Persuader.mobi
+   Child, Lee - Jack Reacher 08 - The Enemy.mobi
+   Child, Lee - Jack Reacher 09 - One Shot.mobi
+   Child, Lee - Jack Reacher 10 - The Hard Way.mobi
+   Child, Lee - Jack Reacher 11 - Bad Luck and Trouble.mobi
+   Child, Lee - Jack Reacher 12 - Nothing to Lose.mobi
+   Child, Lee - Jack Reacher 13 - Gone Tomorrow.mobi
+   Child, Lee - Jack Reacher 14 - 61 Hours.mobi
+   Child, Lee - Jack Reacher 15 - Worth Dying For.azw
+   Hunter, Stephen - Bob Lee Swagger 01 - Point Of Impact.mobi
+   Lee, Harper - To Kill a Mockingbird.mobi
+6 The Bible
+   Kingsolver, Barbara - The Poisonwood Bible.mobi
+7 Wuthering Heights Emily Bronte
+   Bronte, Charlotte - Jane Eyre.mobi
+=8 Nineteen Eighty-Four George Orwell
+   Orwell, George - 1984.mobi
+   Orwell, George - Animal Farm.mobi
+=8 His Dark Materials Philip Pullman
+   Pullman, Philip - His Dark Materials 01 - The Golden Compass.mobi
+   Pullman, Philip - His Dark Materials 02 - The Subtle Knife.mobi
+   Pullman, Philip - His Dark Materials 03 - The Amber Spyglass.mobi</code></pre>
+<p>This is why programming ability will one day become an important skill for living in a technological society. It may not be as fundamental as reading and writing, but few things are. Driving a car, wiring a plug, painting a fence — all things further down the scale but still considered by many as “life skills”. Unless there is a powerful change in the way computers can be made to understand our desires in the next few years then I think “simple scripting” will also fall into that category.</p>]]></description>
+    <pubDate>Fri, 08 Mar 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-03-08-unreasonable-effectiveness-of-code.html</guid>
+</item>
+<item>
+    <title>Another blog rewrite, because the first one was so much fun</title>
+    <link>http://dougalstanton.net/posts/2013-03-07-another-blog-rewrite.html</link>
+    <description><![CDATA[<p>Less than a month ago I set up this blog with <a href="http://octopress.org" title="Octopress, static blogging tool written in Ruby">Octopress</a>. I was inspired by <a href="http://harveynick.com/blog/2012/03/17/new-ish-year-new-ish-blog/" title="Dr Nick&#39;s blog, also using Octopress">Nick’s move in that direction</a>.</p>
+<p>I suffered a great deal trying to get Ruby installed with the correct versions but in the end I managed it. I was impressed with how nice blogging could be when stripped down to the basics. I’ve been writing my posts with Markdown formatting for years — it’s nice that the rest of the blogging world has caught up. :-)</p>
+<p>I was looking forward to blogging more, but the next time I tried to update my blog something had gone very wrong. The versions of various parts of the system had got out of sync and I couldn’t update any more.</p>
+<p>At this point plan B kicked into play and I started looking at another tool for generating static blogs, <a href="http://jaspervdj.be/hakyll/" title="Hakyll, static blogging tool/library written in Haskell">Hakyll</a>. It had one thing going strongly in its favour — it was written in Haskell which I understand rather than Ruby which I haven’t taken the time to study. But this familiarity was necessary because Hakyll is not a plug-n-play system. It’s more of a library suite for putting together your own static blog generator. (See Xmonad for the same story with tiling window managers.)</p>
+<p>So I’ve been quiet on the blogging front in order to get this blog running in the background. I also had to come up with some style (sorry about that), which I have borrowed from various places. But as someone once said, “as long as you don’t leave any fingerprints at the scene of the crime”…</p>]]></description>
+    <pubDate>Thu, 07 Mar 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-03-07-another-blog-rewrite.html</guid>
+</item>
+<item>
+    <title>Travelling to Edinburgh with delicate foodstuffs</title>
+    <link>http://dougalstanton.net/posts/2013-03-02-travelling-to-edinburgh-with-delicate-foodstuffs.html</link>
+    <description><![CDATA[<p>For our (approximately) monthly (kind of) book group we visit everyone’s flat in rotation and we’re the only people who don’t live in Edinburgh but still attend, so we do a lot of travelling to Edinburgh.</p>
+<p>The Glasgow underground trains stop at about 6.30pm on a Sunday so we generally take our bikes at least some of the distance so we can cycle back to the flat when we get back to Glasgow Queen Street station.</p>
+<p>So we have to come up with food which travels well, and can cope with being beaten a bit on the back of a bike. But no! Tomorrow we’re going to try a new trick. First we cycle to the train station (which handily has both subway and intercity train services) and get the underground back to the flat, with a return ticket. Then we take the food, carefully, on the underground back out to the station and go to Edinburgh.</p>
+<p>When we return in the evening we will have only empty dishes and can hop on the bikes heading home. It’s a bit of extra to-ing and fro-ing but I suspect it will work admirably.</p>]]></description>
+    <pubDate>Sat, 02 Mar 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-03-02-travelling-to-edinburgh-with-delicate-foodstuffs.html</guid>
+</item>
+<item>
+    <title>Avoid the Eclipse "managed build" trap at all costs</title>
+    <link>http://dougalstanton.net/posts/2013-03-01-avoid-the-eclipse-build-trap.html</link>
+    <description><![CDATA[<p>I implore you, if you want any kind of future-proofing of your development system <em>do not</em> resort to using the Eclipse “managed build” setup. At first it might seem the obvious step, to get your IDE to deal with what should and shouldn’t be included in your final product, because you’re already working in there, right?</p>
+<p>And then you discover that you can’t really debug how it builds your binaries. You get inscrutable “internal failure” messages with nothing more to go on. There is no extra level of debug, no graph of dependencies to illustrate what is happening.</p>
+<p>If you want to run a continuous integration server — and you do, don’t you? — you’ll notice that “headless Eclipse” is a monstrosity that shouldn’t have been let loose by right-thinking people. Have you read any HP Lovecraft, by any chance?</p>
+<p>In short, you have no control over what happens to your build any more. You press the little button in the GUI and hope it makes the right decisions. In my experience, that seems quite naive.</p>]]></description>
+    <pubDate>Fri, 01 Mar 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-03-01-avoid-the-eclipse-build-trap.html</guid>
+</item>
+<item>
+    <title>Octopress uses a non-conformant Markdown processor as standard</title>
+    <link>http://dougalstanton.net/posts/2013-02-22-non-conformant-markdown-processor.html</link>
+    <description><![CDATA[<p>I have just discovered, while adding an <a href="/about.html">about page</a> to this blog, that the standard Markdown processor used by Octopress (called RDiscount) doesn’t conform to the Markdown standard. I mean in particular the reference-style links, which I happen to be quite fond of. You should be able to include <code>&lt;</code> and <code>&gt;</code> characters around URLs like so:</p>
+<pre><code>[eg]: &lt;http://www.example.com&gt; &quot;The canonical example page&quot;</code></pre>
+<p>Instead of stripping out these optional characters RDiscount passes them on and they get translated into HTML entities (<code>&amp;lt;</code>) which causes further steps in the chain to choke. Ultimately you end up with a very broken web page.</p>
+<p>A simple <code>An [example link] [eg]</code> turns into the following mess — oh dear.</p>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p&gt;</span>An <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;</span><span class="dv">&amp;lt;</span><span class="st">http://www.example.com&gt;</span><span class="dv">&amp;#8221;</span><span class="st"> </span>
+<span class="st">         title=</span><span class="dv">&amp;#8221;</span><span class="st">The canonical example page</span><span class="dv">&amp;#8221;</span><span class="st">&gt;example link</span><span class="er">&lt;</span><span class="st">/a&gt;.</span><span class="er">&lt;</span><span class="st">/p&gt;</span></code></pre>
+<p>Notice how the opening quote never gets closed? The rest of that paragraph is the <code>href</code> for that link! So I will have to learn to omit the angle brackets:</p>
+<pre><code>[eg]: http://www.example.com &quot;The canonical example page&quot;</code></pre>
+<p>PS. While writing <em>this</em> post I discovered that Pygments.rb (which does syntax highlighting for Octopress) doesn’t support Markdown as a highlightable language (fair enough, can’t cover everything) — but also that it crashes if you name a language it doesn’t know. Not having a good day.</p>
+<pre><code> ``` markdown I will kill your highlighter
+ [eg]: &lt;http://www.example.com&gt; &quot;The canonical example page&quot;
+ ```</code></pre>]]></description>
+    <pubDate>Fri, 22 Feb 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-02-22-non-conformant-markdown-processor.html</guid>
+</item>
+<item>
+    <title>Home-brew static analysis for fun and profit</title>
+    <link>http://dougalstanton.net/posts/2013-02-19-home-brew-static-analysis.html</link>
+    <description><![CDATA[<p>I’ve had recent success with writing test tools for use in-house. We have a system which greatly abuses the C preprocessor to create (at build-time) sets of translations and default settings for different languages and particular customers.</p>
+<p>Due to the limitations of anything built with the preprocessor there isn’t anything even remotely like type checking. In order to truly spot any problems in the translations you have to build the binary (and potentially even <em>run</em> it). Which means we need a single binary which includes every single customer variant and linguistic complexity, which will take an age to build; or we have to build have a dozen variants to ensure that adding one thing doesn’t cause mayhem.</p>
+<p>And as mentioned, building it doesn’t really go all the way. If the possible values for a timer are between 5 and 300 there’s no way the compiler can spot that 405 or 2 are invalid. All it can check is that the <code>int</code> you’ve provided will happily compile when inserted into an array of <code>int</code>.</p>
+<p>Thankfully most of these checks can be done easily and quickly — very quickly — without even compiling. The unprocessed file has some hints to translators to indicate what are valid sizes for strings, ranges for numbers and descriptions of the text. Parsing this meta-data alongside the translations gives us all the information we need to perform these checks without compiling anything.</p>
+<p>Once the necessary data is parsed and the remainder discarded we can get to the interesting work. Thankfully I started this work during a period of intense development on menu strings and default options, so the translation file was suffering a lot of abuse. Finding candidate tests was as easy as looking at the most recent reasons for fixing the file.</p>
+<p>Initially I ran all tests in parallel, gathering results as they went and discarding the used data. (A single pass is definitely beneficial when you’ve just loaded in ~100,000 lines.) This was considerably faster than running one pass for each test. The result was printed to standard out almost instantly, which was gratifying when it passed and even better when it spotted a legitimate failure.</p>
+<p>But I was tempted by the option in the Jenkins CI server to pick up JUnit-style XML files and create comparison graphs of successive runs. I could have graphs of my successful tests, for free! All I would have to do is write some XML in an undocumented format, which no longer felt so appealing.</p>
+<p>Thankfully a test runner called Test Framework came to the rescue, promising to write the XML for me. I converted the format and results of my tests into some structure it could understand and let it do the hard work. I got prettier command line output and XML files that Jenkins could parse, but lost one-pass testing. I can live with this; the tests still run in about six seconds which is a considerable saving on a twenty minute build.</p>]]></description>
+    <pubDate>Tue, 19 Feb 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-02-19-home-brew-static-analysis.html</guid>
+</item>
+<item>
+    <title>Five minutes everyday to turn the world upside down</title>
+    <link>http://dougalstanton.net/posts/2013-02-18-five-minutes-everyday.html</link>
+    <description><![CDATA[<p>I’ve been doing capoeira now for about two years I think, and one thing that hasn’t really changed in that time is my complete inability to do a handstand or a cartwheel.</p>
+<p>Since the beginning of the year (you know, midway through January) I’ve had an alarm on my phone that buzzes at 6.30pm <em>every single day</em> and tells me I have to practise. Nearly every single day since I started I have set aside five minutes to practise. I set a timer so that I don’t do 3 minutes then decide that I’m probably done, and so that I stop at 5 minutes. The point is that it’s not supposed to be a burden or a long gruelling exercise regime.</p>
+<p>Five minutes practice every day — throwing myself up against a bare wall initially, but slowly becoming more independent — has brought about a massive change. I’m still not capable of busting out amazing inverted moves but if I’d known two years ago that I could be where I am now with only month of this I would be shocked.</p>
+<p>I’ll continue to be shocked and I hope the improvements will continue too.</p>]]></description>
+    <pubDate>Mon, 18 Feb 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-02-18-five-minutes-everyday.html</guid>
+</item>
+<item>
+    <title>Salvaging the Challenge</title>
+    <link>http://dougalstanton.net/posts/2013-02-17-salvaging-the-challenge.html</link>
+    <description><![CDATA[<p>Since losing the old blog host I’ve been trying to reclaim what I could from the Wayback Machine, particularly archives of Helen’s blog.</p>
+<p>There aren’t enough entries saved to cover the whole year, even if we ignore the entries which aren’t part of the challenge. Which basically means we’ve lost the record of the challenge and frankly I’m gutted by this state of affairs.</p>
+<p>I have 67 saved entries and there should be about 190, though some of those will be links to the same article. This is still a lot of missing posts.</p>
+<p>At this point I’m beginning to wonder if saving those 67 is worth it. I’m quite demoralised.</p>]]></description>
+    <pubDate>Sun, 17 Feb 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-02-17-salvaging-the-challenge.html</guid>
+</item>
+<item>
+    <title>Migration to Octopress etc</title>
+    <link>http://dougalstanton.net/posts/2013-02-11-migration-to-octopress-etc.html</link>
+    <description><![CDATA[<p>After the loss of my old blog, which I hope to at least salvage from the Wayback Machine at some point, I’ve moved over to using Octopress which has the built-in advantage of backed-up posts.</p>
+<p>I shouldn’t be able to lose it all again.</p>
+<p>(What is it about backing up data? You never do it until you’ve been burned once? I think that seems about right. Everyone is invincible until the first time they are laid low.)</p>
+<p>Soon I will get my domain redirected here, so while things are interrupted they will not be interrupted forever.</p>]]></description>
+    <pubDate>Mon, 11 Feb 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-02-11-migration-to-octopress-etc.html</guid>
+</item>
+
+    </channel> 
+</rss>
