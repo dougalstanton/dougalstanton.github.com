@@ -6,8 +6,35 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sun, 10 Mar 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Wed, 13 Mar 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Sending customised HTML documents to a Kindle</title>
+    <link>http://dougalstanton.net/posts/2013-03-13-send-to-kindle-customised.html</link>
+    <description><![CDATA[<p>I’ve been experimenting with the most effective way to send documents to the Kindle and have them turn up formatted in the correct fashion. It’s possible to email a document (HTML, MS Word, PDF and others) to a special address registered with your Kindle and Amazon will do the conversion and send the doc straight to your device.</p>
+<p>The sticking points that I wanted to overcome were</p>
+<ul>
+<li>Missing metadata. I want the proper title and author to appear on my Kindle.</li>
+<li>Missing document! Sometimes when I use the <em>Send To Kindle</em> tools it chooses an arbitrary subsection of the document and cuts off the rest, so I get the first half or the second half instead of it all.</li>
+<li>Cleanliness. Some parts of a document can be done away with and I don’t really care. When I’m reading on the train I don’t need a big list of references to journal articles I’ll never be able to find. It would be nice to just cut this stuff out.</li>
+</ul>
+<p>Using a <a href="http://okmij.org/ftp/ML/generalization.html" title="How OCaml type checker works -- or what polymorphism and garbage collection have in common">recent article published by Oleg Kiselyov</a> as a test specimen, I tried a few approaches. The first thing to do was cleanup:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">wget</span> http://okmij.org/ftp/ML/generalization.html
+$ <span class="kw">pandoc</span> -i generalization.html -o original.markdown</code></pre>
+<p>In Markdown format the document has lost none of the content but it’s much easier to read and edit, and so clean. You can remove the bits you don’t want (like navigation bars). Next you should add a title block at the very top:</p>
+<pre><code>% Efficient and Insightful Generalization
+% Oleg Kiselyov
+% February 2013</code></pre>
+<p>At this stage I tried producing an HTML document but the metadata (embedded as <code>meta</code> and <code>title</code> tags) were being ignored in the conversion process.</p>
+<p>Next I tried EPub format in the hope it would be more faithfully converted:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">pandoc</span> -S -i original.markdown -o final.epub</code></pre>
+<p>But despite what I had read on <em>some website somewhere</em>, Amazon won’t do EPub conversion for you. :-(</p>
+<p>Next attempt, using Calibre, a graphical ebook manager that comes with a suite of command line support tools. The tool <code>ebook-convert</code> is as straightforward to use as PanDoc — it guesses everything you would need to tell it from the filename:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">ebook-convert</span> final.epub final.mobi</code></pre>
+<p>This time the result was perfect, with title and author as I’d defined them, and even a “book cover” for free. This tool can also read other formats; it will be interesting to see what I can get with a combination of PanDoc and Ebook Convert when formatting PDFs for the Kindle. Watch this space.</p>]]></description>
+    <pubDate>Wed, 13 Mar 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-03-13-send-to-kindle-customised.html</guid>
+</item>
+<item>
     <title>Converting from Darcs to Git no longer so easy</title>
     <link>http://dougalstanton.net/posts/2013-03-10-converting-from-darcs-to-git.html</link>
     <description><![CDATA[<p>I am trying to convert all of my Darcs repositories to Git repositories so I can upload them to <a href="http://github.com/dougalstanton" title="My GitHub repository">GitHub</a> to provide a simple form of backup and a location to publish anything interesting. Although to be fair I don’t think I have any projects which count as “interesting”. Any which were previously of value have bit-rotted or in some way become less useful. I guess I also have a lot of private-use tools which other people will not find useful.</p>
@@ -156,16 +183,6 @@ Abercrombie, Joe - First Law 03 - Last Argument of Kings.mobi
 <p>At this point I’m beginning to wonder if saving those 67 is worth it. I’m quite demoralised.</p>]]></description>
     <pubDate>Sun, 17 Feb 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-02-17-salvaging-the-challenge.html</guid>
-</item>
-<item>
-    <title>Migration to Octopress etc</title>
-    <link>http://dougalstanton.net/posts/2013-02-11-migration-to-octopress-etc.html</link>
-    <description><![CDATA[<p>After the loss of my old blog, which I hope to at least salvage from the Wayback Machine at some point, I’ve moved over to using Octopress which has the built-in advantage of backed-up posts.</p>
-<p>I shouldn’t be able to lose it all again.</p>
-<p>(What is it about backing up data? You never do it until you’ve been burned once? I think that seems about right. Everyone is invincible until the first time they are laid low.)</p>
-<p>Soon I will get my domain redirected here, so while things are interrupted they will not be interrupted forever.</p>]]></description>
-    <pubDate>Mon, 11 Feb 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-02-11-migration-to-octopress-etc.html</guid>
 </item>
 
     </channel> 
