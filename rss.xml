@@ -8,6 +8,43 @@
                    type="application/rss+xml" />
         <lastBuildDate>Sat, 16 Mar 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>A rational approach to mixing your drinks</title>
+    <link>http://dougalstanton.net/posts/2013-03-16-rational-approach-to-mixing-your-drinks.html</link>
+    <description><![CDATA[<p>Many of the classic cocktails follow a very simple proportional structure and can be simply adapted to other styles. Like making bread, I suppose. There’s some fundamentals which are dead easy to play with and still produce great results.</p>
+<p>The style I’m talking about is called a “sour”. You need:</p>
+<ul>
+<li>ice for mixing and something to mix it in</li>
+<li>some glasses</li>
+<li>spirits and mixers, chosen carefully from whatever you have lying around…</li>
+</ul>
+<p>The basic idea is that you have 3 ingredients mixed in a 4:2:1 ratio (others may quibble, this is what I use). That means I normally use 60ml + 30ml + 15ml = 105ml per person, which is a decent-sized drink. You might feel happier scaling it down to 50+25+12 if you feel like something less hardcore. :-)</p>
+<p>The largest ingredient, which we’ll call the base, is the spirit that sets the tone for the rest of the drink. I’m talking gin, tequila, brandy and others. The next two ingredients are sweet and sour, in that order. The sweet can be a liqueur or it can be a sugar syrup. And finally we need the sourness, typically lemon juice or lime juice.</p>
+<p>The process is simple — throw everything in a container and shake until thoroughly cooled. Strain out into glasses. (It’s nice to sieve the drink properly as you pour into your glass because citrus juices tend to have chunks which cloud the drink. But maybe you’re not bothered about that. Don’t make a fuss if you don’t want to.)</p>
+<p>So what have you made?</p>
+<dl>
+<dt>Whisky Sour, Brandy Sour, …</dt>
+<dd>Your named spirit plus sugar syrup and lemon juice. Nothing simpler.
+</dd>
+<dt>Sidecar</dt>
+<dd>Cognac, sweetened with Cointreau and soured with lemon juice.
+</dd>
+<dt>White Lady</dt>
+<dd>A Sidecar, but using gin instead of cognac. Also known as a Chelsea Sidecar. The Cointrea and lemon juice remain. This is one of our favourites.
+</dd>
+<dt>Margarita</dt>
+<dd>A bigger jump, as we’re changing the souring agent this time too. Tequila, Cointrea and lime juice.
+</dd>
+<dt>Daiquiri</dt>
+<dd>Rum, sugar syrup and lime juice.
+</dd>
+</dl>
+<p>Anything involving citrus fruits or syrups is naturally open to variance. You might find you’ve got really sour lemons or really sweet syrup (particularly if you make it yourself — just sugar dissolved in hot water and allowed to cool). The proportions will have to adjust to suit, and to match your needs. (It wouldn’t be the first time the bottle has run out at the wrong moment…)</p>
+<p>To recap — simple proportions of 4:2:1. Base, sweet, sour. Choose a famous cocktail or make a variation. Maybe you want to make a Sidecar with pear liqueur instead of Cointreau? A Daiquiri with elderflower cordial to sweeten? A Sidecar using bourbon instead of cognac? There’s always a new sensation to be discovered.</p>
+<p>Now if you’ll excuse me, I’m off to use up that half-lemon that in the fridge…</p>]]></description>
+    <pubDate>Sat, 16 Mar 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-03-16-rational-approach-to-mixing-your-drinks.html</guid>
+</item>
+<item>
     <title>Conor McBride at EdLambda: "Totally Live Coprogramming"</title>
     <link>http://dougalstanton.net/posts/2013-03-16-edlambda-conor-mcbride.html</link>
     <description><![CDATA[<p>I tried to get some people from work to come along to this because I knew it would be a totally different thing from what we normally do. Sadly, no takers. I wrote a brief summary via email as a follow-up to the invitation, which went something like this.</p>
@@ -213,16 +250,6 @@ Abercrombie, Joe - First Law 03 - Last Argument of Kings.mobi
 <p>Thankfully a test runner called Test Framework came to the rescue, promising to write the XML for me. I converted the format and results of my tests into some structure it could understand and let it do the hard work. I got prettier command line output and XML files that Jenkins could parse, but lost one-pass testing. I can live with this; the tests still run in about six seconds which is a considerable saving on a twenty minute build.</p>]]></description>
     <pubDate>Tue, 19 Feb 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-02-19-home-brew-static-analysis.html</guid>
-</item>
-<item>
-    <title>Five minutes everyday to turn the world upside down</title>
-    <link>http://dougalstanton.net/posts/2013-02-18-five-minutes-everyday.html</link>
-    <description><![CDATA[<p>I’ve been doing capoeira now for about two years I think, and one thing that hasn’t really changed in that time is my complete inability to do a handstand or a cartwheel.</p>
-<p>Since the beginning of the year (you know, midway through January) I’ve had an alarm on my phone that buzzes at 6.30pm <em>every single day</em> and tells me I have to practise. Nearly every single day since I started I have set aside five minutes to practise. I set a timer so that I don’t do 3 minutes then decide that I’m probably done, and so that I stop at 5 minutes. The point is that it’s not supposed to be a burden or a long gruelling exercise regime.</p>
-<p>Five minutes practice every day — throwing myself up against a bare wall initially, but slowly becoming more independent — has brought about a massive change. I’m still not capable of busting out amazing inverted moves but if I’d known two years ago that I could be where I am now with only month of this I would be shocked.</p>
-<p>I’ll continue to be shocked and I hope the improvements will continue too.</p>]]></description>
-    <pubDate>Mon, 18 Feb 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-02-18-five-minutes-everyday.html</guid>
 </item>
 
     </channel> 
