@@ -8,8 +8,59 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2013-03-13T00:00:00Z</updated>
+    <updated>2013-03-16T00:00:00Z</updated>
     <entry>
+    <title>Conor McBride at EdLambda: "Totally Live Coprogramming"</title>
+    <link href="http://dougalstanton.net/posts/2013-03-16-edlambda-conor-mcbride.html" />
+    <id>http://dougalstanton.net/posts/2013-03-16-edlambda-conor-mcbride.html</id>
+    <published>2013-03-16T00:00:00Z</published>
+    <updated>2013-03-16T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>I tried to get some people from work to come along to this because I knew it would be a totally different thing from what we normally do. Sadly, no takers. I wrote a brief summary via email as a follow-up to the invitation, which went something like this.</p>
+<hr />
+<p>The high-level summary:</p>
+<ul>
+<li>Programming is batch processing. Drop everything in the hopper and eventually it will be “done”; a result is produced. Examples: compiler (produces binary), print (produces hard copy), payroll calculation (produces error, never in your favour).</li>
+<li>Coprogramming is a continuous “productive” process, always able to produce output. Examples: operating systems, servers, word processors. All software which interacts with the user and doesn’t “stop” until told.</li>
+<li>All software which we write already fits these two definitions, but the division is never clear. It is easy to create a coprogram which halts (an error) or a program which doesn’t halt (another error). (Everything is a compiler or an interpreter.)</li>
+<li>Total (co-)programming is about defining the dividing line and being honest when it is not clear that a result may be produced.</li>
+<li>Future: Type safety — ensuring that programs only operate on values available <em>now</em> (data) and not on values which <em>might</em> be available in the future (codata).</li>
+</ul>
+<hr />
+<p>So, to set the scene you can see the <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/Hmm/EdLam.hs" title="Combined notes and Strathclyde-enhanced Haskell definitions">live programming script/notes/ Haskell module</a> which Conor used in his talk. We reached about part 5 (ignoring the <em>Gratuitous Dependent Types</em> interlude) before things just got a bit hairy for that late on a Tuesday evening. As usual there was a fair mix of people there, from people currently paid to research programming language to others who don’t know Haskell and were probably struggling with the syntax. (Not least because of <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/" title="the Strathclyde Haskell Enhancement, a preprocessor for extra confusion">SHE</a>, a fancy preprocessor which provides access to an exciting wealth of alternate syntax for applicative functors, type-level data and more.) Two hours of talk about co-programming should be enough for anyone at that time of night, so we didn’t get on to part 6 though a couple of us spoke to Conor afterwards and he told us briefly what it is about.</p>
+<p>I’ll go through the sections and see what I can remember that was interesting/useful. I advise <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/Hmm/EdLam.hs" title="Combined notes and Strathclyde-enhanced Haskell definitions">opening the script in an adjacent window</a> so you can read the definitions and follow along as I go.</p>
+<p>In <strong>part 1</strong> we defined infinite streams, data structures which are similar to a list (head + tail) but have no <code>nil</code> value to mark the end. This was used to introduce the idea of “productive” systems, which can always provide “another value” once you remove the top item from the list.</p>
+<p>As with all things there is a discipline to using streams, and co-data in general. With data you destruct one item at a time, recursively processing the data until it’s all done. With codata you construct layers corecursively. The corecursive call is not guaranteed to end but it <em>can</em>.</p>
+<p>Having defined a stream “manually” we move on to a generalised approach to producing streams which requires that we pass in a generator function which creates the next value in the stream from the current seed. Given a function which produces a value the stream will continue to produce (though no guarantees are made that it will produce the anything useful).</p>
+<p>This is total corecursion; the data production will not fail from the unfolding nature of the stream. In <strong>part 2</strong> we use this power to demonstrate general recursion. Assuming an infinite stream of values, we can hunt through them until one meets our desired criteria. A corecursive stream of <a href="http://mathworld.wolfram.com/CollatzProblem.html" title="Collatz Problem, which may be undecidable">“hailstone numbers” for the Collatz problem</a> can be examined until the first 1 is found. For a given starting point we can never tell if the program will halt.</p>
+<p>In <strong>part 3</strong> the corecursive structure is laid out in full generality, being some combination of “a value” and “further structure”. The fixpoint data type <code>Nu f = In (f (Nu f))</code> takes some structure <code>f</code> which may hold its own data and further nested data of type <code>Nu f</code>. (See also the fixpoint operation for functions, <code>fix f = f (fix f)</code> which may terminate depending on the definition of <code>f</code>, ie whether it always evaluates the first argument, the recursive call to <code>(fix f)</code>.)</p>
+<p>The definition <code>ana</code> (anamorphism) is another generalisation, an unfold for all codata, which similarly takes a seed and a generator function and produces (possibly) infinite codata. Again the Collatz problem is demonstrated with the more general foundation of the fixpoint codatatype generation.</p>
+<p>As mentioned, <strong>gratuitous dependent types</strong> wasn’t mentioned in detail though the <a href="http://en.wikipedia.org/wiki/Stern%E2%80%93Brocot_tree" title="the infinite Stern-Brocot tree of rationals">Stern–Brocot tree was generated</a> to a few levels to show how the anamorphism can be used to create non-linear shapes.</p>
+<p>To break away from the very mathematical discussion of the fixpoints and the enumeration of all rationals, <strong>part 4</strong> demonstrates co-recursion in a simple chat program, bringing in IO and user interaction (in case you thought it was the kind of thing functional programming shied away from). The operation is quite straightforward but at the definition of <code>chain</code> it is possible to lock up the system by not being “fair”. (Alice can monopolise the system and Silent Bob never won’t do anything.)</p>
+<p>The definition of <code>fchain</code> somehow rectifies this problem though I can’t quite see how it would do so — the differences I can see are that the <code>Say</code>/<code>TSay</code> constructors are subtly different,</p>
+<pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Chat</span> x <span class="fu">=</span> <span class="dt">Say</span>  <span class="dt">String</span> x        <span class="fu">|</span> <span class="fu">...</span>
+<span class="kw">data</span> <span class="dt">Turn</span> x <span class="fu">=</span> <span class="dt">TSay</span> <span class="dt">String</span> (<span class="dt">Turn</span> x) <span class="fu">|</span> <span class="fu">...</span></code></pre>
+<p>and that <code>fchain</code> uses an anamorphism to construct the chained conversation instead of manual recursive calls. Hmm, on further reflection I wonder if the important detail is that with this new definition of <code>Turn</code> and <code>fchain</code> it is not possible to define <code>gobbyAlice</code> and <code>silentBob</code> because they are not allowed to call themselves? They must always result in a fresh start which can be interrupted by another listener/speaker.</p>
+<p>Having seen that it is possible to create infinitely productive streams of codata and that we can deal with them in a safe manner, in <strong>part 5</strong> we see how it is easy to start treating codata <em>unsafely</em>. The definition of <code>nats</code> is productive but <code>naats</code> (using a <code>map</code>-style function that treats two values at a time) will hang:</p>
+<pre><code>nats = 0 :&gt; fmap (1+) nats
+     { where fmap f (s:&gt;ss) = f s :&gt; fmap f ss 
+       and   (n :&gt; ats) = nats }
+     = 0 :&gt; (1+) n :&gt; fmap (1+) ats
+     { where (n :&gt; ats) = (0 :&gt; ats) }
+     = 0 :&gt; (1 + 0) :&gt; fmap (1+) ats
+     = 0 :&gt; 1 :&gt; fmap (1+) ats
+
+naats = 0 :&gt; maap (1+) naats
+      { maap f (x :&gt; y :&gt; zs) = f x :&gt; f y :&gt; maap f zs }
+      = 0 :&gt; !!! can&#39;t match
+                 0 :&gt; _
+             and
+                 x :&gt; y :&gt; _
+             not enough values !!!</code></pre>
+<p>We still have to be careful; it’s easy to move from safe to unsafe if we rely on calculating with codata that doesn’t (or may never) exist.</p>
+<p>The type system should help us here, by enforcing constraints about what data is safe to consume now and what must be kept until later.</p>
+<p>I’m going to stop here for now, because this is basically the point at which Conor stopped. The rest of the document I will read carefully and maybe attempt to tease something useful out at a later date.</p>]]></summary>
+</entry>
+<entry>
     <title>Sending customised HTML documents to a Kindle</title>
     <link href="http://dougalstanton.net/posts/2013-03-13-send-to-kindle-customised.html" />
     <id>http://dougalstanton.net/posts/2013-03-13-send-to-kindle-customised.html</id>
@@ -184,17 +235,6 @@ Abercrombie, Joe - First Law 03 - Last Argument of Kings.mobi
 <p>Since the beginning of the year (you know, midway through January) I’ve had an alarm on my phone that buzzes at 6.30pm <em>every single day</em> and tells me I have to practise. Nearly every single day since I started I have set aside five minutes to practise. I set a timer so that I don’t do 3 minutes then decide that I’m probably done, and so that I stop at 5 minutes. The point is that it’s not supposed to be a burden or a long gruelling exercise regime.</p>
 <p>Five minutes practice every day — throwing myself up against a bare wall initially, but slowly becoming more independent — has brought about a massive change. I’m still not capable of busting out amazing inverted moves but if I’d known two years ago that I could be where I am now with only month of this I would be shocked.</p>
 <p>I’ll continue to be shocked and I hope the improvements will continue too.</p>]]></summary>
-</entry>
-<entry>
-    <title>Salvaging the Challenge</title>
-    <link href="http://dougalstanton.net/posts/2013-02-17-salvaging-the-challenge.html" />
-    <id>http://dougalstanton.net/posts/2013-02-17-salvaging-the-challenge.html</id>
-    <published>2013-02-17T00:00:00Z</published>
-    <updated>2013-02-17T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Since losing the old blog host I’ve been trying to reclaim what I could from the Wayback Machine, particularly archives of Helen’s blog.</p>
-<p>There aren’t enough entries saved to cover the whole year, even if we ignore the entries which aren’t part of the challenge. Which basically means we’ve lost the record of the challenge and frankly I’m gutted by this state of affairs.</p>
-<p>I have 67 saved entries and there should be about 190, though some of those will be links to the same article. This is still a lot of missing posts.</p>
-<p>At this point I’m beginning to wonder if saving those 67 is worth it. I’m quite demoralised.</p>]]></summary>
 </entry>
 
 </feed>
