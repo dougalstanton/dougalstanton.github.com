@@ -37,14 +37,14 @@
 </ul>
 <p>Using a <a href="http://okmij.org/ftp/ML/generalization.html" title="How OCaml type checker works -- or what polymorphism and garbage collection have in common">recent article published by Oleg Kiselyov</a> as a test specimen, I tried a few approaches. The first thing to do was cleanup:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">wget</span> http://okmij.org/ftp/ML/generalization.html
-$ <span class="kw">pandoc</span> -i generalization.html -o original.markdown</code></pre>
+$ <span class="kw">pandoc</span> generalization.html -o original.markdown</code></pre>
 <p>In Markdown format the document has lost none of the content but it’s much easier to read and edit, and so clean. You can remove the bits you don’t want (like navigation bars). Next you should add a title block at the very top:</p>
 <pre><code>% Efficient and Insightful Generalization
 % Oleg Kiselyov
 % February 2013</code></pre>
 <p>At this stage I tried producing an HTML document but the metadata (embedded as <code>meta</code> and <code>title</code> tags) were being ignored in the conversion process.</p>
 <p>Next I tried EPub format in the hope it would be more faithfully converted:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">pandoc</span> -S -i original.markdown -o final.epub</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">pandoc</span> -S original.markdown -o final.epub</code></pre>
 <p>But despite what I had read on <em>some website somewhere</em>, Amazon won’t do EPub conversion for you. :-(</p>
 <p>Next attempt, using Calibre, a graphical ebook manager that comes with a suite of command line support tools. The tool <code>ebook-convert</code> is as straightforward to use as PanDoc — it guesses everything you would need to tell it from the filename:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">ebook-convert</span> final.epub final.mobi</code></pre>

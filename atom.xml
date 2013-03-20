@@ -8,8 +8,20 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2013-03-16T00:00:00Z</updated>
+    <updated>2013-03-20T00:00:00Z</updated>
     <entry>
+    <title>Thoughts from the saddle</title>
+    <link href="http://dougalstanton.net/posts/2013-03-20-thoughts-from-the-saddle.html" />
+    <id>http://dougalstanton.net/posts/2013-03-20-thoughts-from-the-saddle.html</id>
+    <published>2013-03-20T00:00:00Z</published>
+    <updated>2013-03-20T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>We’re finally making it out of winter — in fact, I believe this is the vernal equinox? — and it’s no longer pitch dark when I leave work. Just in time for the lighter evenings, we both had the front lights from our bikes stolen on Monday evening.</p>
+<p>I’ve seen a lot of suggestions for different styles of bike lights in the last couple of years, and now I’m obviously in the market for something new. My previous front light was very difficult to whip on and off the bike, which is why I tended to leave it there. I won’t make that mistake again. I’ve even seen suggestions for indicator lights for bikes, though the problem with cyclists is we don’t have <strong>width</strong> and so drivers look right through us. So not only do they not really see us whether we’ve got lights on or not, but indicators wouldn’t be mounted far enough apart to be very obvious at a distance. I suppose if you had a big 2D array of LEDs hanging off the back of the saddle with an animated arrow it might do something.</p>
+<p>But really I don’t think the issue is one of clouded intent — if anybody cares to look they should see my road position (much more obvious when you’re a tiny fraction of the lane width), the direction I’m looking and that I’m frequently checking behind me. All this even <em>if</em> it is unsafe to indicate with my hands. (The two occasions I’ve been thrown from my bike by potholes I had only one hand steering because I was indicating with the other. I now only indicate when obviously safe to do so.)</p>
+<p>Drivers don’t often take the time to look and that is where the real problem lies. Forethought and patience seem to be thin on the ground sometimes too. The number of drivers who appear to wait until pinch points in the road — traffic islands, delivery vans stopped on narrow streets, etc — before overtaking never ceases to amaze.</p>
+<p>Last month I experimented with taking a shorter train journey and a correspondingly longer bike ride when commuting to work. This provided financial savings but the risk to my life seemed to fly out of control. One car driver tried to nudge me out of the way as I exited a roundabout. A bus driver tried to run me off the road twice in one journey (once on a narrow bridge, once at a traffic island — see a theme?). I made a complaint to <a href="http://www.stuartscoachescarlukeml8.co.uk/" title="Stuarts of Carluke, belligerent buses of Lanarkshire">Stuarts of Carluke</a> and though the man was very apologetic on the phone I doubt anything came of it. I’ve gone back to the longer train journey.</p>]]></summary>
+</entry>
+<entry>
     <title>A rational approach to mixing your drinks</title>
     <link href="http://dougalstanton.net/posts/2013-03-16-rational-approach-to-mixing-your-drinks.html" />
     <id>http://dougalstanton.net/posts/2013-03-16-rational-approach-to-mixing-your-drinks.html</id>
@@ -113,14 +125,14 @@ naats = 0 :&gt; maap (1+) naats
 </ul>
 <p>Using a <a href="http://okmij.org/ftp/ML/generalization.html" title="How OCaml type checker works -- or what polymorphism and garbage collection have in common">recent article published by Oleg Kiselyov</a> as a test specimen, I tried a few approaches. The first thing to do was cleanup:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">wget</span> http://okmij.org/ftp/ML/generalization.html
-$ <span class="kw">pandoc</span> -i generalization.html -o original.markdown</code></pre>
+$ <span class="kw">pandoc</span> generalization.html -o original.markdown</code></pre>
 <p>In Markdown format the document has lost none of the content but it’s much easier to read and edit, and so clean. You can remove the bits you don’t want (like navigation bars). Next you should add a title block at the very top:</p>
 <pre><code>% Efficient and Insightful Generalization
 % Oleg Kiselyov
 % February 2013</code></pre>
 <p>At this stage I tried producing an HTML document but the metadata (embedded as <code>meta</code> and <code>title</code> tags) were being ignored in the conversion process.</p>
 <p>Next I tried EPub format in the hope it would be more faithfully converted:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">pandoc</span> -S -i original.markdown -o final.epub</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">pandoc</span> -S original.markdown -o final.epub</code></pre>
 <p>But despite what I had read on <em>some website somewhere</em>, Amazon won’t do EPub conversion for you. :-(</p>
 <p>Next attempt, using Calibre, a graphical ebook manager that comes with a suite of command line support tools. The tool <code>ebook-convert</code> is as straightforward to use as PanDoc — it guesses everything you would need to tell it from the filename:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">ebook-convert</span> final.epub final.mobi</code></pre>
@@ -247,21 +259,6 @@ Abercrombie, Joe - First Law 03 - Last Argument of Kings.mobi
 <pre><code> ``` markdown I will kill your highlighter
  [eg]: &lt;http://www.example.com&gt; &quot;The canonical example page&quot;
  ```</code></pre>]]></summary>
-</entry>
-<entry>
-    <title>Home-brew static analysis for fun and profit</title>
-    <link href="http://dougalstanton.net/posts/2013-02-19-home-brew-static-analysis.html" />
-    <id>http://dougalstanton.net/posts/2013-02-19-home-brew-static-analysis.html</id>
-    <published>2013-02-19T00:00:00Z</published>
-    <updated>2013-02-19T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>I’ve had recent success with writing test tools for use in-house. We have a system which greatly abuses the C preprocessor to create (at build-time) sets of translations and default settings for different languages and particular customers.</p>
-<p>Due to the limitations of anything built with the preprocessor there isn’t anything even remotely like type checking. In order to truly spot any problems in the translations you have to build the binary (and potentially even <em>run</em> it). Which means we need a single binary which includes every single customer variant and linguistic complexity, which will take an age to build; or we have to build have a dozen variants to ensure that adding one thing doesn’t cause mayhem.</p>
-<p>And as mentioned, building it doesn’t really go all the way. If the possible values for a timer are between 5 and 300 there’s no way the compiler can spot that 405 or 2 are invalid. All it can check is that the <code>int</code> you’ve provided will happily compile when inserted into an array of <code>int</code>.</p>
-<p>Thankfully most of these checks can be done easily and quickly — very quickly — without even compiling. The unprocessed file has some hints to translators to indicate what are valid sizes for strings, ranges for numbers and descriptions of the text. Parsing this meta-data alongside the translations gives us all the information we need to perform these checks without compiling anything.</p>
-<p>Once the necessary data is parsed and the remainder discarded we can get to the interesting work. Thankfully I started this work during a period of intense development on menu strings and default options, so the translation file was suffering a lot of abuse. Finding candidate tests was as easy as looking at the most recent reasons for fixing the file.</p>
-<p>Initially I ran all tests in parallel, gathering results as they went and discarding the used data. (A single pass is definitely beneficial when you’ve just loaded in ~100,000 lines.) This was considerably faster than running one pass for each test. The result was printed to standard out almost instantly, which was gratifying when it passed and even better when it spotted a legitimate failure.</p>
-<p>But I was tempted by the option in the Jenkins CI server to pick up JUnit-style XML files and create comparison graphs of successive runs. I could have graphs of my successful tests, for free! All I would have to do is write some XML in an undocumented format, which no longer felt so appealing.</p>
-<p>Thankfully a test runner called Test Framework came to the rescue, promising to write the XML for me. I converted the format and results of my tests into some structure it could understand and let it do the hard work. I got prettier command line output and XML files that Jenkins could parse, but lost one-pass testing. I can live with this; the tests still run in about six seconds which is a considerable saving on a twenty minute build.</p>]]></summary>
 </entry>
 
 </feed>
