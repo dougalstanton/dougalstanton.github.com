@@ -6,8 +6,17 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Wed, 20 Mar 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 26 Mar 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Key management (in the real world)</title>
+    <link>http://dougalstanton.net/posts/2013-03-26-key-management.html</link>
+    <description><![CDATA[<p>There isn’t really a solution to having too many keys. You just have to make one mistake with that jailer’s bunch that you haul around everywhere — and suddenly you can’t get into your house, you can’t open up at work, you can’t unlock your bike, and so on until you begin to wonder: why haven’t we solved this yet?</p>
+<p>Thankfully this hasn’t happened to me, but it has happened very recently to someone that I know. And I’m conscious that I do have a fairly large bunch of keys with me at all times, which is a liability.</p>
+<p>There’s not even a comfortable way to carry them in my pocket without jabbing myself in the leg. I’d love to leave most of them at home; maybe have some kind of thumb-print access for the flat or something. Or voice recognition, that would be good (until it doesn’t work).</p>]]></description>
+    <pubDate>Tue, 26 Mar 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-03-26-key-management.html</guid>
+</item>
+<item>
     <title>Thoughts from the saddle</title>
     <link>http://dougalstanton.net/posts/2013-03-20-thoughts-from-the-saddle.html</link>
     <description><![CDATA[<p>We’re finally making it out of winter — in fact, I believe this is the vernal equinox? — and it’s no longer pitch dark when I leave work. Just in time for the lighter evenings, we both had the front lights from our bikes stolen on Monday evening.</p>
@@ -229,24 +238,6 @@ Abercrombie, Joe - First Law 03 - Last Argument of Kings.mobi
 <p>In short, you have no control over what happens to your build any more. You press the little button in the GUI and hope it makes the right decisions. In my experience, that seems quite naive.</p>]]></description>
     <pubDate>Fri, 01 Mar 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-03-01-avoid-the-eclipse-build-trap.html</guid>
-</item>
-<item>
-    <title>Octopress uses a non-conformant Markdown processor as standard</title>
-    <link>http://dougalstanton.net/posts/2013-02-22-non-conformant-markdown-processor.html</link>
-    <description><![CDATA[<p>I have just discovered, while adding an <a href="/about.html">about page</a> to this blog, that the standard Markdown processor used by Octopress (called RDiscount) doesn’t conform to the Markdown standard. I mean in particular the reference-style links, which I happen to be quite fond of. You should be able to include <code>&lt;</code> and <code>&gt;</code> characters around URLs like so:</p>
-<pre><code>[eg]: &lt;http://www.example.com&gt; &quot;The canonical example page&quot;</code></pre>
-<p>Instead of stripping out these optional characters RDiscount passes them on and they get translated into HTML entities (<code>&amp;lt;</code>) which causes further steps in the chain to choke. Ultimately you end up with a very broken web page.</p>
-<p>A simple <code>An [example link] [eg]</code> turns into the following mess — oh dear.</p>
-<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p&gt;</span>An <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;</span><span class="dv">&amp;lt;</span><span class="st">http://www.example.com&gt;</span><span class="dv">&amp;#8221;</span><span class="st"> </span>
-<span class="st">         title=</span><span class="dv">&amp;#8221;</span><span class="st">The canonical example page</span><span class="dv">&amp;#8221;</span><span class="st">&gt;example link</span><span class="er">&lt;</span><span class="st">/a&gt;.</span><span class="er">&lt;</span><span class="st">/p&gt;</span></code></pre>
-<p>Notice how the opening quote never gets closed? The rest of that paragraph is the <code>href</code> for that link! So I will have to learn to omit the angle brackets:</p>
-<pre><code>[eg]: http://www.example.com &quot;The canonical example page&quot;</code></pre>
-<p>PS. While writing <em>this</em> post I discovered that Pygments.rb (which does syntax highlighting for Octopress) doesn’t support Markdown as a highlightable language (fair enough, can’t cover everything) — but also that it crashes if you name a language it doesn’t know. Not having a good day.</p>
-<pre><code> ``` markdown I will kill your highlighter
- [eg]: &lt;http://www.example.com&gt; &quot;The canonical example page&quot;
- ```</code></pre>]]></description>
-    <pubDate>Fri, 22 Feb 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-02-22-non-conformant-markdown-processor.html</guid>
 </item>
 
     </channel> 
