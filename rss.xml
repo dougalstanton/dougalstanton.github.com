@@ -6,8 +6,18 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Tue, 26 Mar 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Wed, 27 Mar 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>More exciting handstand news</title>
+    <link>http://dougalstanton.net/posts/2013-03-27-more-exciting-handstand-news.html</link>
+    <description><![CDATA[<p>Okay so probably not as exciting for you as it is for me, but today I had one of those little victories that’s worth writing about.</p>
+<p>Today I managed a couple of really lengthy handstands which were totally unsupported. One of them I actually had to stop because nothing was going to happen to stop it otherwise. Now honestly I don’t know what the actual measurement would have been but I’m guessing at least ten seconds of freestanding inversion without overshooting.</p>
+<p>In the last fortnight I’d been slightly worried that I was reaching a plateau so I’ve been trying to force new difficulties into my five minutes. The first being, obviously, doing them well away from the wall so I risk overshooting. The second is making them harder by going in sideways — more of a cartwheel entrance rather than face-on. This is more capoeira-focused so I’ve also been trying to <em>not</em> look at the ground as I place my hands but to keep my eyes on my imaginary opponent.</p>
+<p>Between all these things I’ve managed to push through the stage last week where I thought I was stagnating — to produce exciting new freestanding developments. Just from five minutes every day.</p>]]></description>
+    <pubDate>Wed, 27 Mar 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-03-27-more-exciting-handstand-news.html</guid>
+</item>
+<item>
     <title>Key management (in the real world)</title>
     <link>http://dougalstanton.net/posts/2013-03-26-key-management.html</link>
     <description><![CDATA[<p>There isn’t really a solution to having too many keys. You just have to make one mistake with that jailer’s bunch that you haul around everywhere — and suddenly you can’t get into your house, you can’t open up at work, you can’t unlock your bike, and so on until you begin to wonder: why haven’t we solved this yet?</p>
@@ -228,16 +238,6 @@ Abercrombie, Joe - First Law 03 - Last Argument of Kings.mobi
 <p>When we return in the evening we will have only empty dishes and can hop on the bikes heading home. It’s a bit of extra to-ing and fro-ing but I suspect it will work admirably.</p>]]></description>
     <pubDate>Sat, 02 Mar 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-03-02-travelling-to-edinburgh-with-delicate-foodstuffs.html</guid>
-</item>
-<item>
-    <title>Avoid the Eclipse "managed build" trap at all costs</title>
-    <link>http://dougalstanton.net/posts/2013-03-01-avoid-the-eclipse-build-trap.html</link>
-    <description><![CDATA[<p>I implore you, if you want any kind of future-proofing of your development system <em>do not</em> resort to using the Eclipse “managed build” setup. At first it might seem the obvious step, to get your IDE to deal with what should and shouldn’t be included in your final product, because you’re already working in there, right?</p>
-<p>And then you discover that you can’t really debug how it builds your binaries. You get inscrutable “internal failure” messages with nothing more to go on. There is no extra level of debug, no graph of dependencies to illustrate what is happening.</p>
-<p>If you want to run a continuous integration server — and you do, don’t you? — you’ll notice that “headless Eclipse” is a monstrosity that shouldn’t have been let loose by right-thinking people. Have you read any HP Lovecraft, by any chance?</p>
-<p>In short, you have no control over what happens to your build any more. You press the little button in the GUI and hope it makes the right decisions. In my experience, that seems quite naive.</p>]]></description>
-    <pubDate>Fri, 01 Mar 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-03-01-avoid-the-eclipse-build-trap.html</guid>
 </item>
 
     </channel> 
