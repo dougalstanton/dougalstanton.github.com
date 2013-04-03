@@ -8,8 +8,18 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2013-03-29T00:00:00Z</updated>
+    <updated>2013-04-03T00:00:00Z</updated>
     <entry>
+    <title>Looking to windward</title>
+    <link href="http://dougalstanton.net/posts/2013-04-03-looking-to-windward.html" />
+    <id>http://dougalstanton.net/posts/2013-04-03-looking-to-windward.html</id>
+    <published>2013-04-03T00:00:00Z</published>
+    <updated>2013-04-03T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>One of my absolute favourite authors, Iain (M) Banks, has announced he has late-stage cancer and is not expected to live out the year.</p>
+<p>While he is making the most of his final months with family and friends the rest of the literary world is mourning him. This will no doubt come as a slight shock to him, but it isn’t surprising to me. He wrote some <em>exceedingly good books</em>.</p>
+<p>Meanwhile the rest of us will maybe try to <a href="http://www.johnblackwriter.com/2012/10/04/poetic-licence-iain-m-banks-consider-phlebas-and-t-s-eliots-the-waste-land/" title="Iain M Banks and TS Eliot">grasp that wheel harder</a>.</p>]]></summary>
+</entry>
+<entry>
     <title>Glasgow capoeira is going to need a new training hall</title>
     <link href="http://dougalstanton.net/posts/2013-03-29-glasgow-capoeira-is-going-to-need-a-new-training-hall.html" />
     <id>http://dougalstanton.net/posts/2013-03-29-glasgow-capoeira-is-going-to-need-a-new-training-hall.html</id>
@@ -239,18 +249,6 @@ Abercrombie, Joe - First Law 03 - Last Argument of Kings.mobi
    Pullman, Philip - His Dark Materials 02 - The Subtle Knife.mobi
    Pullman, Philip - His Dark Materials 03 - The Amber Spyglass.mobi</code></pre>
 <p>This is why programming ability will one day become an important skill for living in a technological society. It may not be as fundamental as reading and writing, but few things are. Driving a car, wiring a plug, painting a fence — all things further down the scale but still considered by many as “life skills”. Unless there is a powerful change in the way computers can be made to understand our desires in the next few years then I think “simple scripting” will also fall into that category.</p>]]></summary>
-</entry>
-<entry>
-    <title>Another blog rewrite, because the first one was so much fun</title>
-    <link href="http://dougalstanton.net/posts/2013-03-07-another-blog-rewrite.html" />
-    <id>http://dougalstanton.net/posts/2013-03-07-another-blog-rewrite.html</id>
-    <published>2013-03-07T00:00:00Z</published>
-    <updated>2013-03-07T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Less than a month ago I set up this blog with <a href="http://octopress.org" title="Octopress, static blogging tool written in Ruby">Octopress</a>. I was inspired by <a href="http://harveynick.com/blog/2012/03/17/new-ish-year-new-ish-blog/" title="Dr Nick&#39;s blog, also using Octopress">Nick’s move in that direction</a>.</p>
-<p>I suffered a great deal trying to get Ruby installed with the correct versions but in the end I managed it. I was impressed with how nice blogging could be when stripped down to the basics. I’ve been writing my posts with Markdown formatting for years — it’s nice that the rest of the blogging world has caught up. :-)</p>
-<p>I was looking forward to blogging more, but the next time I tried to update my blog something had gone very wrong. The versions of various parts of the system had got out of sync and I couldn’t update any more.</p>
-<p>At this point plan B kicked into play and I started looking at another tool for generating static blogs, <a href="http://jaspervdj.be/hakyll/" title="Hakyll, static blogging tool/library written in Haskell">Hakyll</a>. It had one thing going strongly in its favour — it was written in Haskell which I understand rather than Ruby which I haven’t taken the time to study. But this familiarity was necessary because Hakyll is not a plug-n-play system. It’s more of a library suite for putting together your own static blog generator. (See Xmonad for the same story with tiling window managers.)</p>
-<p>So I’ve been quiet on the blogging front in order to get this blog running in the background. I also had to come up with some style (sorry about that), which I have borrowed from various places. But as someone once said, “as long as you don’t leave any fingerprints at the scene of the crime”…</p>]]></summary>
 </entry>
 
 </feed>
