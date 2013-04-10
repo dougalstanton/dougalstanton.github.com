@@ -8,8 +8,27 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2013-04-03T00:00:00Z</updated>
+    <updated>2013-04-10T00:00:00Z</updated>
     <entry>
+    <title>Comics from the halfbakery</title>
+    <link href="http://dougalstanton.net/posts/2013-04-10-comics-from-the-halfbakery.html" />
+    <id>http://dougalstanton.net/posts/2013-04-10-comics-from-the-halfbakery.html</id>
+    <published>2013-04-10T00:00:00Z</published>
+    <updated>2013-04-10T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>I have finally got my act together and started writing some code and even uploaded it! Check out <a href="http://github.com/dougalstanton/comicbake">http://github.com/dougalstanton/comicbake</a> where you will find the latest copy of the long-dormant Comic Bake.</p>
+<p>So what is Comic Bake? What was it back in the day? It’s a tool for converting little text files into comics. The files are designed to be as easy to write as possible, and are inspired by the likes of play scripts and Markdown documents.</p>
+<p>The actual format is actually in a bit of flux at the moment as I recently decided what I was using wasn’t ideal and so I’ve cleaned things up. In fact last night was spent cleaning up the parser considerably, not least because the code was several years old and my understanding of parser combinators and such has moved on since then. I’ve had more practice!</p>
+<p>The scripts are combined with standard images provided by the user<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> and the resulting comic strip, with text in bubbles and all that, written back out to disk. I’m always shocked that it works, to be honest!</p>
+<p>At some point obviously I want to (a) put it on Hackage and maybe (b) look into binary releases so people don’t have to install the entirety of the Haskell Platform and various development libraries (ImageMagick <em>and</em> GD, talk about indecisive!) just to use it. It’s not quite at the initial release stage yet though. I want to make it a bit more usable and maybe improve the algorithm for speech bubble placement before I do that.</p>
+<p>But I’m glad I pulled it out of the archive; I’m feeling really good about it now and finally getting to do some interesting coding after a long period of stagnation.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>I realise as I write this that it would be a lot easier to use if there were “standard” images. Creating image maps so that Comic Bake knows where each character is has always been the least usable part of the experience. If I provide some defaults then what used to be the only way to do things now becomes “advanced” — there if you want it but not necessary.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>]]></summary>
+</entry>
+<entry>
     <title>Looking to windward</title>
     <link href="http://dougalstanton.net/posts/2013-04-03-looking-to-windward.html" />
     <id>http://dougalstanton.net/posts/2013-04-03-looking-to-windward.html</id>
@@ -190,65 +209,6 @@ $ <span class="kw">pandoc</span> generalization.html -o original.markdown</code>
     <summary type="html"><![CDATA[<p>I am trying to convert all of my Darcs repositories to Git repositories so I can upload them to <a href="http://github.com/dougalstanton" title="My GitHub repository">GitHub</a> to provide a simple form of backup and a location to publish anything interesting. Although to be fair I don’t think I have any projects which count as “interesting”. Any which were previously of value have bit-rotted or in some way become less useful. I guess I also have a lot of private-use tools which other people will not find useful.</p>
 <p>The tool which used to do the job, <code>darcs-fastconvert</code>, hasn’t been updated in a couple of years while Darcs has had some significant internal restructuring. I can not compile <code>darcs-fastconvert</code> against a recent Darcs and I don’t have the familiarity with the code to fix things. I got so far by correcting the import statements from functions which had migrated to different modules, but when the data constructors and type-level constraints started to kick in the error messages became too difficult. I am no longer sure whether these are inherent problems or the effect of me changing the wrong thing.</p>
 <p>Either way, I hope to get them converted soon and maybe pick up some of the projects again.</p>]]></summary>
-</entry>
-<entry>
-    <title>The unreasonable effectiveness of programming to Get Stuff Done&trade;</title>
-    <link href="http://dougalstanton.net/posts/2013-03-08-unreasonable-effectiveness-of-code.html" />
-    <id>http://dougalstanton.net/posts/2013-03-08-unreasonable-effectiveness-of-code.html</id>
-    <published>2013-03-08T00:00:00Z</published>
-    <updated>2013-03-08T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>I’m not going to try convincing you of anything here, but instead to lay out the facts of what just happened.</p>
-<p>I have a list of “readers’ favourite books” that was the result of a popular vote a few years ago (in the Guardian I think, though that doesn’t matter at this point).</p>
-<p>I was also given a list of books for Kindle that someone at work had access to, by means which we shall not explore in detail. <em>wink</em></p>
-<p>I thought, I wonder how many of the favourite books are available? One list looked like this:</p>
-<pre><code>1 Pride and Prejudice Jane Austen
-2 The Lord of the Rings JRR Tolkien
-3 Jane Eyre Charlotte Bronte
-4 Harry Potter series JK Rowling
-5 To Kill a Mockingbird Harper Lee
-...</code></pre>
-<p>and the other looked like this:</p>
-<pre><code>Abagnale, Frank W. - Catch Me If You Can.mobi
-Abbot, Edwin - Flatland.mobi
-Abercrombie, Joe - First Law 01 - The Blade Itself.mobi
-Abercrombie, Joe - First Law 02 - Before They Are Hanged.mobi
-Abercrombie, Joe - First Law 03 - Last Argument of Kings.mobi
-...</code></pre>
-<p>A few minutes later I had a good answer on my screen. I won’t go into the details because they’re neither interesting or relevant. (I took the last word from the first list, which was the author’s surname, and searched for it in the other list. Any book which produced no candidates was dropped entirely. The rest were printed.) The point is that I had the means and the ability to very quickly answer the following question:</p>
-<blockquote>
-<p>Out of this list of 100 books and this list of 1400 books, which ones match up?</p>
-</blockquote>
-<p>The results were by no means perfect (this sample below shows the fuzzy nature of the output) but they were good enough to eyeball and say “yep, the book is there” or not.</p>
-<pre><code>5 To Kill a Mockingbird Harper Lee
-   Child, Lee - Jack Reacher 01 - Killing Floor.mobi
-   Child, Lee - Jack Reacher 02 - Die Trying.mobi
-   Child, Lee - Jack Reacher 03 - Tripwire.mobi
-   Child, Lee - Jack Reacher 04 - Running Blind.mobi
-   Child, Lee - Jack Reacher 05 - Echo Burning.mobi
-   Child, Lee - Jack Reacher 06 - Without Fail.mobi
-   Child, Lee - Jack Reacher 07 - Persuader.mobi
-   Child, Lee - Jack Reacher 08 - The Enemy.mobi
-   Child, Lee - Jack Reacher 09 - One Shot.mobi
-   Child, Lee - Jack Reacher 10 - The Hard Way.mobi
-   Child, Lee - Jack Reacher 11 - Bad Luck and Trouble.mobi
-   Child, Lee - Jack Reacher 12 - Nothing to Lose.mobi
-   Child, Lee - Jack Reacher 13 - Gone Tomorrow.mobi
-   Child, Lee - Jack Reacher 14 - 61 Hours.mobi
-   Child, Lee - Jack Reacher 15 - Worth Dying For.azw
-   Hunter, Stephen - Bob Lee Swagger 01 - Point Of Impact.mobi
-   Lee, Harper - To Kill a Mockingbird.mobi
-6 The Bible
-   Kingsolver, Barbara - The Poisonwood Bible.mobi
-7 Wuthering Heights Emily Bronte
-   Bronte, Charlotte - Jane Eyre.mobi
-=8 Nineteen Eighty-Four George Orwell
-   Orwell, George - 1984.mobi
-   Orwell, George - Animal Farm.mobi
-=8 His Dark Materials Philip Pullman
-   Pullman, Philip - His Dark Materials 01 - The Golden Compass.mobi
-   Pullman, Philip - His Dark Materials 02 - The Subtle Knife.mobi
-   Pullman, Philip - His Dark Materials 03 - The Amber Spyglass.mobi</code></pre>
-<p>This is why programming ability will one day become an important skill for living in a technological society. It may not be as fundamental as reading and writing, but few things are. Driving a car, wiring a plug, painting a fence — all things further down the scale but still considered by many as “life skills”. Unless there is a powerful change in the way computers can be made to understand our desires in the next few years then I think “simple scripting” will also fall into that category.</p>]]></summary>
 </entry>
 
 </feed>
