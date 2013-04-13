@@ -6,8 +6,17 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Wed, 10 Apr 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sat, 13 Apr 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Finally, proof I can read</title>
+    <link>http://dougalstanton.net/posts/2013-04-13-finally-proof-i-can-read.html</link>
+    <description><![CDATA[<p>It’s been ages since I finished a book. I’m having real trouble sticking to it right now but I’m not sure why. I guess everything I pick up isn’t engaging me but that doesn’t answer the question why my current threshold for engagement is so high.</p>
+<p>So I’m happy to state that I finished <a href="http://en.wikipedia.org/wiki/Lost_at_Sea_(comics)" title="Lost at Sea, the graphic novel">Lost at Sea by Bryan Lee O’Malley</a>, who is also the author of the Scott Pilgrim series. (Which for the record I haven’t read or seen the film, I just found this fact interesting.) I enjoyed it greatly. It’s about a girl discovering some friends on an accidental road trip and deals with the important issues of the day — whether cats can steal your soul, that kind of thing.</p>
+<p>And it’s a graphic novel/comic and short, which goes more than some way to explain why I managed to finish it. It probably only has about 20 pages worth of text, but the medium doesn’t require many words. It’s unlikely I can claim that each picture adds another thousand to the word count.</p>]]></description>
+    <pubDate>Sat, 13 Apr 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-04-13-finally-proof-i-can-read.html</guid>
+</item>
+<item>
     <title>Comics from the halfbakery</title>
     <link>http://dougalstanton.net/posts/2013-04-10-comics-from-the-halfbakery.html</link>
     <description><![CDATA[<p>I have finally got my act together and started writing some code and even uploaded it! Check out <a href="http://github.com/dougalstanton/comicbake">http://github.com/dougalstanton/comicbake</a> where you will find the latest copy of the long-dormant Comic Bake.</p>
@@ -188,15 +197,6 @@ $ <span class="kw">pandoc</span> generalization.html -o original.markdown</code>
 <p>This time the result was perfect, with title and author as I’d defined them, and even a “book cover” for free. This tool can also read other formats; it will be interesting to see what I can get with a combination of PanDoc and Ebook Convert when formatting PDFs for the Kindle. Watch this space.</p>]]></description>
     <pubDate>Wed, 13 Mar 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-03-13-send-to-kindle-customised.html</guid>
-</item>
-<item>
-    <title>Converting from Darcs to Git no longer so easy</title>
-    <link>http://dougalstanton.net/posts/2013-03-10-converting-from-darcs-to-git.html</link>
-    <description><![CDATA[<p>I am trying to convert all of my Darcs repositories to Git repositories so I can upload them to <a href="http://github.com/dougalstanton" title="My GitHub repository">GitHub</a> to provide a simple form of backup and a location to publish anything interesting. Although to be fair I don’t think I have any projects which count as “interesting”. Any which were previously of value have bit-rotted or in some way become less useful. I guess I also have a lot of private-use tools which other people will not find useful.</p>
-<p>The tool which used to do the job, <code>darcs-fastconvert</code>, hasn’t been updated in a couple of years while Darcs has had some significant internal restructuring. I can not compile <code>darcs-fastconvert</code> against a recent Darcs and I don’t have the familiarity with the code to fix things. I got so far by correcting the import statements from functions which had migrated to different modules, but when the data constructors and type-level constraints started to kick in the error messages became too difficult. I am no longer sure whether these are inherent problems or the effect of me changing the wrong thing.</p>
-<p>Either way, I hope to get them converted soon and maybe pick up some of the projects again.</p>]]></description>
-    <pubDate>Sun, 10 Mar 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-03-10-converting-from-darcs-to-git.html</guid>
 </item>
 
     </channel> 
