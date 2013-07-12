@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Looking Out To Sea - Converting from Darcs to Git no longer so easy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/default.css" />
+<link rel="stylesheet" type="text/css" href="../style/syntax.css" />
+<link rel="alternate" type="application/rss+xml" href="../rss.xml" title="Dougal's blog" />
+<link rel="alternate" type="application/atom+xml" href="../atom.xml" title="Dougal's blog" />
+</head>
+
+<body>
+<div id="blog">
+
+<header>
+<h1>Looking Out To Sea</h1>
+</header>
+
+<nav>
+<menu id="page_menu">
+    <a href="../index.html">home</a> —
+    <a href="../about.html">about</a> —
+    <a href="../projects.html">projects</a> —
+    <a href="../archive.html">archive</a>
+</menu>
+</nav>
+
+<article>
+<h2>Converting from Darcs to Git no longer so easy</h2>
+<section>
+<p>I am trying to convert all of my Darcs repositories to Git repositories so I can upload them to <a href="http://github.com/dougalstanton" title="My GitHub repository">GitHub</a> to provide a simple form of backup and a location to publish anything interesting. Although to be fair I don’t think I have any projects which count as “interesting”. Any which were previously of value have bit-rotted or in some way become less useful. I guess I also have a lot of private-use tools which other people will not find useful.</p>
+<p>The tool which used to do the job, <code>darcs-fastconvert</code>, hasn’t been updated in a couple of years while Darcs has had some significant internal restructuring. I can not compile <code>darcs-fastconvert</code> against a recent Darcs and I don’t have the familiarity with the code to fix things. I got so far by correcting the import statements from functions which had migrated to different modules, but when the data constructors and type-level constraints started to kick in the error messages became too difficult. I am no longer sure whether these are inherent problems or the effect of me changing the wrong thing.</p>
+<p>Either way, I hope to get them converted soon and maybe pick up some of the projects again.</p>
+</section>
+</article>
+
+</div>
+</body>
+
+</html>

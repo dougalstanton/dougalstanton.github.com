@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Looking Out To Sea - Sending customised HTML documents to a Kindle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/default.css" />
+<link rel="stylesheet" type="text/css" href="../style/syntax.css" />
+<link rel="alternate" type="application/rss+xml" href="../rss.xml" title="Dougal's blog" />
+<link rel="alternate" type="application/atom+xml" href="../atom.xml" title="Dougal's blog" />
+</head>
+
+<body>
+<div id="blog">
+
+<header>
+<h1>Looking Out To Sea</h1>
+</header>
+
+<nav>
+<menu id="page_menu">
+    <a href="../index.html">home</a> —
+    <a href="../about.html">about</a> —
+    <a href="../projects.html">projects</a> —
+    <a href="../archive.html">archive</a>
+</menu>
+</nav>
+
+<article>
+<h2>Sending customised HTML documents to a Kindle</h2>
+<section>
+<p>I’ve been experimenting with the most effective way to send documents to the Kindle and have them turn up formatted in the correct fashion. It’s possible to email a document (HTML, MS Word, PDF and others) to a special address registered with your Kindle and Amazon will do the conversion and send the doc straight to your device.</p>
+<p>The sticking points that I wanted to overcome were</p>
+<ul>
+<li>Missing metadata. I want the proper title and author to appear on my Kindle.</li>
+<li>Missing document! Sometimes when I use the <em>Send To Kindle</em> tools it chooses an arbitrary subsection of the document and cuts off the rest, so I get the first half or the second half instead of it all.</li>
+<li>Cleanliness. Some parts of a document can be done away with and I don’t really care. When I’m reading on the train I don’t need a big list of references to journal articles I’ll never be able to find. It would be nice to just cut this stuff out.</li>
+</ul>
+<p>Using a <a href="http://okmij.org/ftp/ML/generalization.html" title="How OCaml type checker works -- or what polymorphism and garbage collection have in common">recent article published by Oleg Kiselyov</a> as a test specimen, I tried a few approaches. The first thing to do was cleanup:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">wget</span> http://okmij.org/ftp/ML/generalization.html
+$ <span class="kw">pandoc</span> generalization.html -o original.markdown</code></pre>
+<p>In Markdown format the document has lost none of the content but it’s much easier to read and edit, and so clean. You can remove the bits you don’t want (like navigation bars). Next you should add a title block at the very top:</p>
+<pre><code>% Efficient and Insightful Generalization
+% Oleg Kiselyov
+% February 2013</code></pre>
+<p>At this stage I tried producing an HTML document but the metadata (embedded as <code>meta</code> and <code>title</code> tags) were being ignored in the conversion process.</p>
+<p>Next I tried EPub format in the hope it would be more faithfully converted:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">pandoc</span> -S original.markdown -o final.epub</code></pre>
+<p>But despite what I had read on <em>some website somewhere</em>, Amazon won’t do EPub conversion for you. :-(</p>
+<p>Next attempt, using Calibre, a graphical ebook manager that comes with a suite of command line support tools. The tool <code>ebook-convert</code> is as straightforward to use as PanDoc — it guesses everything you would need to tell it from the filename:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">ebook-convert</span> final.epub final.mobi</code></pre>
+<p>This time the result was perfect, with title and author as I’d defined them, and even a “book cover” for free. This tool can also read other formats; it will be interesting to see what I can get with a combination of PanDoc and Ebook Convert when formatting PDFs for the Kindle. Watch this space.</p>
+</section>
+</article>
+
+</div>
+</body>
+
+</html>
