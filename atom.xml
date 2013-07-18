@@ -8,8 +8,21 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2013-07-13T00:00:00Z</updated>
+    <updated>2013-07-18T00:00:00Z</updated>
     <entry>
+    <title>First time taking a capoeira class</title>
+    <link href="http://dougalstanton.net/posts/2013-07-18-first-time-taking-a-capoeira-class.html" />
+    <id>http://dougalstanton.net/posts/2013-07-18-first-time-taking-a-capoeira-class.html</id>
+    <published>2013-07-18T00:00:00Z</published>
+    <updated>2013-07-18T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>Today, through an unfortunate series of events, both Piolho and Nick were unavailable to teach the class — Piolho we knew all along wouldn’t make it but Nick had to work late out of town.</p>
+<p>The unfortunate part comes where not one but two new people arrive at the group. I ended up taking most of the class with some aid from Simon and Stephen. On the bright side they were both from the Glasgow Senzala group and had done capoeira before. Everyone was able to follow along with my garbled instructions and wooly attempts to explain.</p>
+<p>Most of the class was spent going over very basic stuff which was nice. They were used to a different kind of capoeira, so they could use that to get familiar with the style and I wasn’t too taxed coming up with crazy sequences and variations. We spent a good amount of time on the ginga, because it’s something we all need to work on, endlessly, and it’s something that is very different between Senzala and Mao No Chao.</p>
+<p>In the end I enjoyed myself and I think everyone felt they had worked up a good sweat and didn’t seem to angry that they weren’t getting a teacher with a plan and a system!</p>
+<p>The class was the opposite of what I’d been looking forward to, as I’d wanted to work more on the music stuff and had been trying to practise a basic samba rhythm on the pandeiro while waiting outside. But that is not how things fell out.</p>
+<p>So I hope to see them again in future and if I ever have to take a class again I’ll maybe have something in the back of my mind.</p>]]></summary>
+</entry>
+<entry>
     <title>Cooking by ratios: the book</title>
     <link href="http://dougalstanton.net/posts/2013-07-13-cooking-by-ratios-the-book.html" />
     <id>http://dougalstanton.net/posts/2013-07-13-cooking-by-ratios-the-book.html</id>
@@ -132,25 +145,6 @@ style="float:left;margin-right:10px;"></a></p>
     <summary type="html"><![CDATA[<p>It’s been ages since I finished a book. I’m having real trouble sticking to it right now but I’m not sure why. I guess everything I pick up isn’t engaging me but that doesn’t answer the question why my current threshold for engagement is so high.</p>
 <p>So I’m happy to state that I finished <a href="http://en.wikipedia.org/wiki/Lost_at_Sea_(comics)" title="Lost at Sea, the graphic novel">Lost at Sea by Bryan Lee O’Malley</a>, who is also the author of the Scott Pilgrim series. (Which for the record I haven’t read or seen the film, I just found this fact interesting.) I enjoyed it greatly. It’s about a girl discovering some friends on an accidental road trip and deals with the important issues of the day — whether cats can steal your soul, that kind of thing.</p>
 <p>And it’s a graphic novel/comic and short, which goes more than some way to explain why I managed to finish it. It probably only has about 20 pages worth of text, but the medium doesn’t require many words. It’s unlikely I can claim that each picture adds another thousand to the word count.</p>]]></summary>
-</entry>
-<entry>
-    <title>Comics from the halfbakery</title>
-    <link href="http://dougalstanton.net/posts/2013-04-10-comics-from-the-halfbakery.html" />
-    <id>http://dougalstanton.net/posts/2013-04-10-comics-from-the-halfbakery.html</id>
-    <published>2013-04-10T00:00:00Z</published>
-    <updated>2013-04-10T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>I have finally got my act together and started writing some code and even uploaded it! Check out <a href="http://github.com/dougalstanton/comicbake">http://github.com/dougalstanton/comicbake</a> where you will find the latest copy of the long-dormant Comic Bake.</p>
-<p>So what is Comic Bake? What was it back in the day? It’s a tool for converting little text files into comics. The files are designed to be as easy to write as possible, and are inspired by the likes of play scripts and Markdown documents.</p>
-<p>The actual format is actually in a bit of flux at the moment as I recently decided what I was using wasn’t ideal and so I’ve cleaned things up. In fact last night was spent cleaning up the parser considerably, not least because the code was several years old and my understanding of parser combinators and such has moved on since then. I’ve had more practice!</p>
-<p>The scripts are combined with standard images provided by the user<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> and the resulting comic strip, with text in bubbles and all that, written back out to disk. I’m always shocked that it works, to be honest!</p>
-<p>At some point obviously I want to (a) put it on Hackage and maybe (b) look into binary releases so people don’t have to install the entirety of the Haskell Platform and various development libraries (ImageMagick <em>and</em> GD, talk about indecisive!) just to use it. It’s not quite at the initial release stage yet though. I want to make it a bit more usable and maybe improve the algorithm for speech bubble placement before I do that.</p>
-<p>But I’m glad I pulled it out of the archive; I’m feeling really good about it now and finally getting to do some interesting coding after a long period of stagnation.</p>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>I realise as I write this that it would be a lot easier to use if there were “standard” images. Creating image maps so that Comic Bake knows where each character is has always been the least usable part of the experience. If I provide some defaults then what used to be the only way to do things now becomes “advanced” — there if you want it but not necessary.<a href="#fnref1">↩</a></p></li>
-</ol>
-</div>]]></summary>
 </entry>
 
 </feed>
