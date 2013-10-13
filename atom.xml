@@ -8,8 +8,27 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2013-09-29T00:00:00Z</updated>
+    <updated>2013-10-13T00:00:00Z</updated>
     <entry>
+    <title>Aaargh! Public speaking</title>
+    <link href="http://dougalstanton.net/posts/2013-10-13-aaargh-public-speaking.html" />
+    <id>http://dougalstanton.net/posts/2013-10-13-aaargh-public-speaking.html</id>
+    <published>2013-10-13T00:00:00Z</published>
+    <updated>2013-10-13T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>Recently there have been a few presentations at work, including one on the two languages <a href="http://www.python.org" title="The Python Programming Language">Python</a> and <a href="http://www.lua.org" title="The Lua Programming Language">Lua</a>. These are both <a href="http://en.wikipedia.org/wiki/Type_system" title="Type systems">dynamically typed languages</a> and as you might know I’m a static typing kinda guy. It seemed reasonable to take this opportunity to get some public speaking practice while providing a counterpoint to this recent languages talk.</p>
+<p>The language we use at work is C++ with a bit of legacy C and some assembly in the darker corners. This is a wee bit object-oriented and very imperative — a whole world away from the Haskell that I would more than likely use as my example language.</p>
+<p>(Other topics suggested by my colleagues were capoeira and software engineering in an independent Scotland. I’m trying to work out how I can make a few “functional programming in an independent Scotland” jokes but there’s nothing forthcoming. The obvious “separation of Church and state” joke isn’t relevant here!)</p>
+<p>The issues which I <em>could</em> discuss are numerous, and there’s plenty of things I’d like to talk about that are not introductory. So sticking to the basics, I have some themes and topics:</p>
+<ul>
+<li>Functions, procedures, side-effects. Some definitions.</li>
+<li>Purity &amp; referential transparency. Haskell is a language of extremes (the “hair shirt”) so we may as well discuss the advantages of this full-on expression-based approach to programming.</li>
+<li>The benefits of an expressive type system. Not an FP-specific thing but it gives an opportunity to show one of Haskell’s strengths.</li>
+<li>Laziness and the duality of data structures and control structures. Might be a bit mind-bending but nobody said it was going to be easy.</li>
+<li>History of Turing machines and Lambda calculus. Not sure if it can be worked in without sounding too much like a lecture but it would help to push the idea that this is a fundamentally different approach to the problem of programming but at the same time it is just as powerful.</li>
+</ul>
+<p>I think I just need to start writing and see what I can come up with. Rearrange, edit, and so on — until I’m done.</p>]]></summary>
+</entry>
+<entry>
     <title>Thoughts on Aliveness in Capoeira</title>
     <link href="http://dougalstanton.net/posts/2013-09-29-thoughts-on-aliveness-in-capoeira.html" />
     <id>http://dougalstanton.net/posts/2013-09-29-thoughts-on-aliveness-in-capoeira.html</id>
@@ -140,19 +159,6 @@
 <p>Jurassic Park has these failings and more besides. There are a number of “experts” in paleontology, genetics, mathematics and zoo management who have manage to come out with some real howlers. Geneticists who can’t remember where they got their DNA from. Park management who can’t remember how to reboot the park management system after it fails.</p>
 <p>What really gets my goat is the inconsistency in character. From one scene to the next characters will change personality drastically so that the stupid thing they do to move the plot along seems reasonable. The nine year-old girl who was rocking back and forth in terror is now complaining about lack of ice cream or wanting to play with the walkie-talkie. In case it had escaped your attention there’s a velociraptor in the hallway. But the plot dictates the raptor find the kids so rather than stay quiet and frightened they have to squabble over who gets to play with this new toy.</p>
 <p>This inconsistency appears again and again, and each time it does the urge to fling the book across the room rises. Frankly, they should all have been eaten.</p>]]></summary>
-</entry>
-<entry>
-    <title>First time taking a capoeira class</title>
-    <link href="http://dougalstanton.net/posts/2013-07-18-first-time-taking-a-capoeira-class.html" />
-    <id>http://dougalstanton.net/posts/2013-07-18-first-time-taking-a-capoeira-class.html</id>
-    <published>2013-07-18T00:00:00Z</published>
-    <updated>2013-07-18T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Today, through an unfortunate series of events, both Piolho and Nick were unavailable to teach the class — Piolho we knew all along wouldn’t make it but Nick had to work late out of town.</p>
-<p>The unfortunate part comes where not one but two new people arrive at the group. I ended up leading most of the class with some aid from Simon and Stephen. On the bright side new folk were from the Glasgow Senzala group and had done capoeira before. Everyone was able to follow along with my garbled instructions and wooly attempts to explain.</p>
-<p>Most of the class was spent going over very basic stuff which was nice. They were used to a different kind of capoeira, so they could use that to get familiar with the style and I wasn’t too taxed coming up with crazy sequences and variations. We spent a good amount of time on the ginga, because it’s something we all need to work on, endlessly, and it’s something that is very different between Senzala and Mao No Chao.</p>
-<p>In the end I enjoyed myself and I think everyone felt they had worked up a good sweat and didn’t seem too angry that they weren’t getting a teacher with a plan and a system!</p>
-<p>The class was the opposite of what I’d been looking forward to, as I’d wanted to work more on the music stuff and had been trying to practise a basic samba rhythm on the pandeiro while waiting outside. But that is not how things fell out.</p>
-<p>So I hope to see them again in future and if I ever have to teach a class again I’ll maybe have something in the back of my mind.</p>]]></summary>
 </entry>
 
 </feed>
