@@ -6,8 +6,23 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sun, 13 Oct 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Oct 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Public speaking and presentation: post match analysis</title>
+    <link>http://dougalstanton.net/posts/2013-10-26-public-speaking-post-match-analysis.html</link>
+    <description><![CDATA[<p>My recent <a href="/posts/2013-10-13-aaargh-public-speaking.html" title="Previous thoughts (anxiety) on public speaking">foray into the realm of public speaking</a> went really well. I presented what was initially going to be a 30 minute talk on functional programming, which in the end last for closer to 45 minutes.</p>
+<p>During development the topic changed from Haskell to functional programming in general to, ultimately, code reuse. I used Haskell as an example language to show ways in which custom control-flow operations (from the basic <code>map</code> and <code>fold</code> to the more abstract <code>&gt;&gt;=</code>) lets you write less code with more consistent semantics and pave the way for parallelising code if necessary.</p>
+<p>The <a href="http://github.com/dougalstanton/intro-to-fp/" title="Source for slides and notes">slides and notes are available on GitHub</a>. Both documents are written in Markdown. I used Pandoc with support for the Reveal.js presentation framework to create a slick set of slides. (I think the look of the slides came across really well, compared to the usual Powerpoint fare.)</p>
+<p>I wrote most of the presentation in prose format to begin with so that I had my ideas fully formed. I think this really helped form a cohesive story. In the past I’ve gone straight from “half-baked idea” to “creating slides” and it has been really easy to become confused about what I should be saying at each stage. Coming up with an initial story meant that I really knew what I was trying to say and most of the time knew what slide was coming up next without peeking.</p>
+<p>I am definitely more influenced by the <a href="http://en.wikipedia.org/wiki/Takahashi_method" title="Minimal full-screen slides in the style of Masayoshi Takahashi">Takahashi</a> and Lessig schools of presentation authoring — really minimising the amount of stuff on screen. The other important thing is not to read what is on screen. I think this is where coming up with a narrative first was really helpful: the slides I produced in the end were illustrations of my words, rather than the words being descriptions of my illustrations.</p>
+<p>Obviously the totally-minimalist presentation style isn’t appropriate if you want to show code, which often requires four or five lines of text. But it’s still much better than two columns of small text with bullet points and a graph all on screen at once.</p>
+<p>One thing I did learn from the actual presentation on the day — apart from the need to assume technical difficulties with the projector — is that the colour and detail you get projected onto the wall (even in a dark room) is much worse than the slides on your screen. I did a test run with the television at home but that still didn’t give me a proper idea how bad the final display would be. Err on the side of thicker lines and greater contrast between colours. I had one tree diagram illustrating an inverted tree. The branches of the tree were just black lines and became totally invisible when projected despite looking fine on my screen and on our television.</p>
+<p>The total experience for me was a lot more relaxed than I was expecting. Whether this was due to good preparation, confidence in my knowledge of the subject, more self-confidence or other things that I can’t pinpoint right now, we’ll never know. I felt really in control and for the rest of the day was on a total high.</p>
+<p>The feedback on the presentation was also very positive — that it ran at a measured pace, I didn’t seem flustered or get myself confused, I didn’t try to say five things at once and so on. In general people seemed to believe that I was in control, which in this instance I really felt I was. A miracle.</p>]]></description>
+    <pubDate>Sat, 26 Oct 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-10-26-public-speaking-post-match-analysis.html</guid>
+</item>
+<item>
     <title>Aaargh! Public speaking</title>
     <link>http://dougalstanton.net/posts/2013-10-13-aaargh-public-speaking.html</link>
     <description><![CDATA[<p>Recently there have been a few presentations at work, including one on the two languages <a href="http://www.python.org" title="The Python Programming Language">Python</a> and <a href="http://www.lua.org" title="The Lua Programming Language">Lua</a>. These are both <a href="http://en.wikipedia.org/wiki/Type_system" title="Type systems">dynamically typed languages</a> and as you might know I’m a static typing kinda guy. It seemed reasonable to take this opportunity to get some public speaking practice while providing a counterpoint to this recent languages talk.</p>
@@ -130,23 +145,6 @@
 <p>The rains held off until we were finished and packing the instruments back up. The deluge when it came was pretty all-consuming though…</p>]]></description>
     <pubDate>Sun, 28 Jul 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-07-28-another-rainy-traquair-fair.html</guid>
-</item>
-<item>
-    <title>Jurassic Park: airport fiction when dinosaurs ruled the bestsellers</title>
-    <link>http://dougalstanton.net/posts/2013-07-25-jurassic-park-airport-fiction.html</link>
-    <description><![CDATA[<p>As a little chap I distinctly remember enjoying Jurassic Park on the big screen. I think it was one of those defining blockbuster movies of my youth, like everybody remembers seeing Star Wars for the first time. And in some sense it was just as revolutionary for the use of computer graphics. Those dinos looked <em>real!</em></p>
-<p>The book is a proper disappointment, falling squarely into the category of stories that get much better when translated to film. Michael Crichton was a prolific writer of works that would eventually get adapted to the screen — maybe they all needed someone else to clean up his terrible dialogue?</p>
-<p>Whenever I read a book now I come back to Christopher Brookmyre’s BDQ:</p>
-<blockquote>
-<p>I’ll swallow any scenario, as long as the film sticks to its own bullet-deadliness quotient.</p>
-<p>An action film establishes its own rules of gunplay. In some, every bullet is potentially lethal — even the old shot to the shoulder can look worryingly near to the upper-chest area. But in others, machine guns can seem the least deadly weapon known to man. To illustrate, at one end of the spectrum there’s your Tarantino movies: reputations aside, there’s not that much gunplay, so when somebody lets off a shot, it’s for real, and it’s usually fatal. High bullet-deadliness quotient. At the other end, there’s your John Woo movies: zillions of rounds goin’ off an’ the only thing they ever hit is glass. Low bullet-deadliness quotient. In a high BDQ film, if the baddie draws a bead on somebody, get ready for ketchup. In a low BDQ film, that’s just a bad day for the janitor. And both types are fine by me, as long as the rules are followed consistently.</p>
-</blockquote>
-<p>The issue of consistency in suspension of disbelief is paramount. It is the downfall of many a bad movie. <em>Prometheus</em>, for example, repeatedly set up characters as leaders in their field who made basic mistakes. in a high technology world which was simultaneously less capable than our own.</p>
-<p>Jurassic Park has these failings and more besides. There are a number of “experts” in paleontology, genetics, mathematics and zoo management who have manage to come out with some real howlers. Geneticists who can’t remember where they got their DNA from. Park management who can’t remember how to reboot the park management system after it fails.</p>
-<p>What really gets my goat is the inconsistency in character. From one scene to the next characters will change personality drastically so that the stupid thing they do to move the plot along seems reasonable. The nine year-old girl who was rocking back and forth in terror is now complaining about lack of ice cream or wanting to play with the walkie-talkie. In case it had escaped your attention there’s a velociraptor in the hallway. But the plot dictates the raptor find the kids so rather than stay quiet and frightened they have to squabble over who gets to play with this new toy.</p>
-<p>This inconsistency appears again and again, and each time it does the urge to fling the book across the room rises. Frankly, they should all have been eaten.</p>]]></description>
-    <pubDate>Thu, 25 Jul 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-07-25-jurassic-park-airport-fiction.html</guid>
 </item>
 
     </channel> 
