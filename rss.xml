@@ -6,8 +6,26 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 09 Nov 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sun, 17 Nov 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Dividing your pie, a problem of lunchtime fairness</title>
+    <link>http://dougalstanton.net/posts/2013-11-17-dividing-your-pie.html</link>
+    <description><![CDATA[<p>We were sitting at the table recently with a thin slice of lemon tart from the Italian deli round the corner. The slice was too thin to cut into two similar wedges without it all going horribly wrong. So the question arose, where do you have to cut a wedge of pie across the way if you want to end up with two equal-sized (but not equal-shaped) chunks.</p>
+<p>First we need some basic definitions. The area of the original whole tart when it was freshly baked is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup></mrow></math>, the area of a circle. We can tell what the radius of the tart is by measuring the wedge from the thinnest point (which would have been at the centre of the tart) to the crust at the outside.</p>
+<p>We are trying to find the location to cut a smaller circle which has the same origin of the larger circle. The total area of the smaller circle is exactly half of the larger circle, so any two wedges with the same arc angle will be related in this ratio — the wedge from the smaller circle will be exactly one half the area of the larger wedge. The radius of the smaller circle is the distance from the origin (which both circles share) to the outer edge of the smaller circle. This is the point where we’d cut across the larger wedge to divide them in two. We want to know the smaller radius, having measured the larger radius.</p>
+<p>We will call the small unknown radius <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>r</mi></mrow></math> and the large known radius <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi></mrow></math>. We start with the basic fact that the area of the large circle is two times the area of the small circle.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>2</mn><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mi>π</mi><msup><mi>R</mi><mn>2</mn></msup></mrow></math></p>
+<p>Both sides of the equation involve <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>π</mi></mrow></math> so we can feel reasonable cancelling that, and dividing both sides by two.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mfrac><msup><mi>R</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></math></p>
+<p>We can see <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>r</mi><mn>2</mn></msup></mrow></math> in terms of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi></mrow></math> now, so all we need is to take the square root of both sides.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>r</mi><mo>=</mo><msqrt><mfrac><msup><mi>R</mi><mn>2</mn></msup><mn>2</mn></mfrac></msqrt></mrow></math></p>
+<p>Once we’ve measured the side of the slice of tart we’ve got it’s very simple to determine the fairest place to cut it. Assuming the tart was baked in a 20cm dish then <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><mo>=</mo><mn>10</mn></mrow></math>.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>r</mi><mo>=</mo><msqrt><mfrac><msup><mn>10</mn><mn>2</mn></msup><mn>2</mn></mfrac></msqrt><mo>=</mo><msqrt><mn>50</mn></msqrt><mo>=</mo><mn>7</mn><mo>.</mo><mn>07</mn></mrow></math></p>
+<p>The distance from point to cut is a little over 7cm.</p>]]></description>
+    <pubDate>Sun, 17 Nov 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-11-17-dividing-your-pie.html</guid>
+</item>
+<item>
     <title>That's not my bag baby (my bag's gone missing)</title>
     <link>http://dougalstanton.net/posts/2013-11-09-thats-not-my-bag-baby.html</link>
     <description><![CDATA[<p>Yesterday on the way to work the train was really busy so I put my rucksack in the overhead storage space… and forgot about it. I remembered at the exact moment that the final carriage was moving past me as I stood on the platform at Linlithgow station.</p>
@@ -153,21 +171,6 @@ because frankly they&#39;re beyond a joke.</code></pre>
 <p>I don’t know what I will do in the future with this extra level of self-knowledge.</p>]]></description>
     <pubDate>Mon, 09 Sep 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-09-09-the-game-is-a-reflection-of-the-players.html</guid>
-</item>
-<item>
-    <title>A new yeast project: brewing</title>
-    <link>http://dougalstanton.net/posts/2013-08-23-a-new-yeast-project-brewing.html</link>
-    <description><![CDATA[<p>Since moving to Glasgow we’ve been lumbered with a terrible oven which doesn’t get hot enough to really do justice to bread baking. Instead I decided to go different avenue and try some home brewing. It’s yeast Jim, but not as we know it.</p>
-<p>I bought a fermenting bucket, a plastic tube, hydrometer, thermometer and airlock from the good people at <a href="http://www.innhousebrewery.co.uk/" title="Innhouse Brewery Company">Glasgow’s eminent homebrew shop</a>. Alongside that I bought the ingredients for a Canadian lager. A friend at work donated some used beer bottles and the use of his crown capper.</p>
-<p>My two obstacles were cleanliness and temperature. Getting and keeping everything sterilised is a hard task. You can never tell until the ferment has worked whether you succeeded in cleaning everything properly. I started the ferment right in the middle of an uncommonly hot few weeks, so finding a dark cool part of the house was a challenge.</p>
-<p>The actual steps to take were very simple and there are a wide variety of videos online that you can watch to provide extra clues. When siphoning and bottling it would have been useful to have an extra pair of hands (or more sophisticated tools) but I muddled through.</p>
-<p>At the stage of writing the beer has been bottled for five days. It will stay in the bottle for another two weeks to “condition”, which should add some carbonation and let the flavour mature and settle a bit. I am looking forward to seeing how it all turns out. Will it be drinkable?</p>
-<hr />
-<p>It’s been conditioning in the bottle for two weeks now and I opened one this evening to see how it was progressing. The taste was mildly hoppy but slightly “thin” somehow. There wasn’t as much carbonation as I’d hoped. I think I may have put too little sugar in the bottles before capping them. But still pretty drinkable, and should be better again in a week’s time.</p>
-<hr />
-<p>Taste number two, about five days later, and things seemed much better — either because I had lower expectations or because more time means better flavour. I’m happy to let others taste it now.</p>]]></description>
-    <pubDate>Fri, 23 Aug 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-08-23-a-new-yeast-project-brewing.html</guid>
 </item>
 
     </channel> 
