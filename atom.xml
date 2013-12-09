@@ -8,8 +8,19 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2013-12-01T00:00:00Z</updated>
+    <updated>2013-12-09T00:00:00Z</updated>
     <entry>
+    <title>XML Starlet (that's what she sed)</title>
+    <link href="http://dougalstanton.net/posts/2013-12-09-xml-starlet-%28that%27s-what-she-said%29.html" />
+    <id>http://dougalstanton.net/posts/2013-12-09-xml-starlet-%28that%27s-what-she-said%29.html</id>
+    <published>2013-12-09T00:00:00Z</published>
+    <updated>2013-12-09T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>The stream editor <code>sed</code> is a great tool for automating text editing — replacing names, date or other statements in a high-speed, programmable fashion.</p>
+<p>One thing it isn’t really cut out for is XML because the structure of XML is not line-oriented. If you want to automate XML editing quickly I totally recommend <a href="http://xmlstar.sourceforge.net" title="XML Starlet Command Line XML Toolkit">XML Starlet</a> for the job. You can replace node names, attributes, values and so on nested deep inside an XML document while paying full heed to namespaces and such.</p>
+<p>On top of that it also lets you see a simple overview and to select values out of documents. Once you get the hang of it you can do some really nice things. I recently got it to rewrite some version numbers inside an Eclipse <code>.cproject</code> file and the resulting script is about as readable and concise as you could hope for.</p>
+<p>Looking at the examples I have barely touched the surface of what can be done with this tool but I’m already pretty impressed with what can be achieved.</p>]]></summary>
+</entry>
+<entry>
     <title>What is capoeira anyway?</title>
     <link href="http://dougalstanton.net/posts/2013-12-01-what-is-capoeira-anyway.html" />
     <id>http://dougalstanton.net/posts/2013-12-01-what-is-capoeira-anyway.html</id>
@@ -157,25 +168,6 @@ because frankly they&#39;re beyond a joke.</code></pre>
 <p>One thing I did learn from the actual presentation on the day — apart from the need to assume technical difficulties with the projector — is that the colour and detail you get projected onto the wall (even in a dark room) is much worse than the slides on your screen. I did a test run with the television at home but that still didn’t give me a proper idea how bad the final display would be. Err on the side of thicker lines and greater contrast between colours. I had one tree diagram illustrating an inverted tree. The branches of the tree were just black lines and became totally invisible when projected despite looking fine on my screen and on our television.</p>
 <p>The total experience for me was a lot more relaxed than I was expecting. Whether this was due to good preparation, confidence in my knowledge of the subject, more self-confidence or other things that I can’t pinpoint right now, we’ll never know. I felt really in control and for the rest of the day was on a total high.</p>
 <p>The feedback on the presentation was also very positive — that it ran at a measured pace, I didn’t seem flustered or get myself confused, I didn’t try to say five things at once and so on. In general people seemed to believe that I was in control, which in this instance I really felt I was. A miracle.</p>]]></summary>
-</entry>
-<entry>
-    <title>Aaargh! Public speaking</title>
-    <link href="http://dougalstanton.net/posts/2013-10-13-aaargh-public-speaking.html" />
-    <id>http://dougalstanton.net/posts/2013-10-13-aaargh-public-speaking.html</id>
-    <published>2013-10-13T00:00:00Z</published>
-    <updated>2013-10-13T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Recently there have been a few presentations at work, including one on the two languages <a href="http://www.python.org" title="The Python Programming Language">Python</a> and <a href="http://www.lua.org" title="The Lua Programming Language">Lua</a>. These are both <a href="http://en.wikipedia.org/wiki/Type_system" title="Type systems">dynamically typed languages</a> and as you might know I’m a static typing kinda guy. It seemed reasonable to take this opportunity to get some public speaking practice while providing a counterpoint to this recent languages talk.</p>
-<p>The language we use at work is C++ with a bit of legacy C and some assembly in the darker corners. This is a wee bit object-oriented and very imperative — a whole world away from the Haskell that I would more than likely use as my example language.</p>
-<p>(Other topics suggested by my colleagues were capoeira and software engineering in an independent Scotland. I’m trying to work out how I can make a few “functional programming in an independent Scotland” jokes but there’s nothing forthcoming. The obvious “separation of Church and state” joke isn’t relevant here!)</p>
-<p>The issues which I <em>could</em> discuss are numerous, and there’s plenty of things I’d like to talk about that are not introductory. So sticking to the basics, I have some themes and topics:</p>
-<ul>
-<li>Functions, procedures, side-effects. Some definitions.</li>
-<li>Purity &amp; referential transparency. Haskell is a language of extremes (the “hair shirt”) so we may as well discuss the advantages of this full-on expression-based approach to programming.</li>
-<li>The benefits of an expressive type system. Not an FP-specific thing but it gives an opportunity to show one of Haskell’s strengths.</li>
-<li>Laziness and the duality of data structures and control structures. Might be a bit mind-bending but nobody said it was going to be easy.</li>
-<li>History of Turing machines and Lambda calculus. Not sure if it can be worked in without sounding too much like a lecture but it would help to push the idea that this is a fundamentally different approach to the problem of programming but at the same time it is just as powerful.</li>
-</ul>
-<p>I think I just need to start writing and see what I can come up with. Rearrange, edit, and so on — until I’m done.</p>]]></summary>
 </entry>
 
 </feed>
