@@ -6,13 +6,59 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Mon, 09 Dec 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 31 Dec 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>The Moriarty Hypothesis</title>
+    <link>http://dougalstanton.net/posts/2013-12-31-the-moriarty-hypothesis.html</link>
+    <description><![CDATA[<div class="figure">
+<img src="http://farm2.staticflickr.com/1330/3174009125_ec49351a6d_d.jpg" />
+</div>
+<p>Sherlock Holmes appears in over fifty short stories and a few full-length novels. Only two of these stories contain his nemesis, Professor James Moriarty. Sir Arthur Conan Doyle introduced Moriarty in the story in which both disappear, grappling with each other as they topple over the Reichenbach Falls. Only after years of public pressure does Conan Doyle relent and bring Holmes back for another story.</p>
+<ol style="list-style-type: decimal">
+<li>Moriarty is the author’s mechanism to kill off Sherlock Holmes.</li>
+</ol>
+<p>The remainder of the Sherlock Holmes stories relate to him solving puzzles and outwitting criminals who are intelligent but not as intelligent as Holmes. These are the stories which made him famous and popular — <em>A Study in Scarlet</em>, <em>The Sign of the Four</em> etc. As readers we wish to marvel at the complex criminal schemes which Holmes can unravel with a single observation.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Holmes is popular because he solves puzzles unlike any normal person.</li>
+</ol>
+<p>Holmes was never an armchair detective — that role was filled by his brother Mycroft — but his action and adventure was in the name of solving the problem. If he could tell Inspector Lestrade where to send his men instead of doing the work himself that was all the better. He rarely took the role of chasing down criminals unless he was already in an encounter with them.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Holmes is not a James Bond action hero but a detective.</li>
+</ol>
+<p>Sherlock Holmes re-appears in countless radio, television and big screen adaptations. In many cases Moriarty exists as a malevolent presence which Holmes acknowledges from the beginning. Sooner or later the evil mastermind comes out of the shadows and the two meet. Of course a criminal mastermind is never as scary face-to-face as when hidden in the shadows so straight away Moriarty becomes less scary. Writers often attempt to compensate by making Moriarty appear unhinged and gruesome.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Moriarty is less scary in the light than in the shadows.</li>
+</ol>
+<p>Sherlock Holmes is a master of observation and deduction. He has a vast knowledge of obscure forensic data stored in his brain. Similarly Professor Moriarty is a criminal mastermind who subtly and imperceptibly controls the underworld in London and beyond. It is difficult but not impossible to create situations in which either one of them will appear as intelligent as they should but to show two vast intellects attempting to outwit each other is tricky beyond measure: both should appear to be more intelligent than the audience at all times.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Moriarty battling Holmes is incredibly hard to write convincingly.</li>
+</ol>
+<p>Moriarty attempts revenge on Sherlock Holmes whenever a plan is foiled. This was his original role — to kill off Holmes for meddling in his schemes. But if Moriarty is introduced at the start he is always involved and quickly comes for revenge. This quickly turns a detective story into an adventure. Holmes turns into Bond. The detecting disappears and is replaced by gunfights, explosions and chases across train roofs. All exciting stuff but stuff we’ve seen before, elsewhere. Stuff that we don’t watch Sherlock Holmes stories for.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Conclusion: Professor Moriarty ruins Sherlock Holmes.</li>
+</ol>
+<p>Of course (6) should not be a surprise. We knew this from (1). Moriarty was <em>designed</em> to ruin Holmes.</p>]]></description>
+    <pubDate>Tue, 31 Dec 2013 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2013-12-31-the-moriarty-hypothesis.html</guid>
+</item>
+<item>
     <title>XML Starlet (that's what she sed)</title>
     <link>http://dougalstanton.net/posts/2013-12-09-xml-starlet-%28that%27s-what-she-said%29.html</link>
     <description><![CDATA[<p>The stream editor <code>sed</code> is a great tool for automating text editing — replacing names, date or other statements in a high-speed, programmable fashion.</p>
 <p>One thing it isn’t really cut out for is XML because the structure of XML is not line-oriented. If you want to automate XML editing quickly I totally recommend <a href="http://xmlstar.sourceforge.net" title="XML Starlet Command Line XML Toolkit">XML Starlet</a> for the job. You can replace node names, attributes, values and so on nested deep inside an XML document while paying full heed to namespaces and such.</p>
 <p>On top of that it also lets you see a simple overview and to select values out of documents. Once you get the hang of it you can do some really nice things. I recently got it to rewrite some version numbers inside an Eclipse <code>.cproject</code> file and the resulting script is about as readable and concise as you could hope for.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">xmlsed()</span>
+<span class="kw">{</span>
+    <span class="ot">ATTRIBUTE=$1</span>
+    <span class="ot">VALUE=$2</span>
+    <span class="co"># A quick hack to update build variables used for debug images.</span>
+    <span class="kw">xmlstarlet</span> edit --inplace --update \
+        <span class="st">&#39;//storageModule[@name=&quot;Debug&quot;]/macros/stringMacro[@name=&quot;&#39;</span><span class="ot">$ATTRIBUTE</span><span class="st">&#39;&quot;]/@value&#39;</span> <span class="kw">\</span>
+        <span class="kw">-v</span> <span class="ot">$VALUE</span> .cproject
+<span class="kw">}</span>
+
+<span class="kw">xmlsed</span> DATE_DD <span class="ot">$(</span><span class="kw">date</span> +<span class="st">&#39;%d&#39;</span><span class="ot">)</span>
+<span class="kw">xmlsed</span> COMPILEDBY <span class="ot">$USER</span></code></pre>
 <p>Looking at the examples I have barely touched the surface of what can be done with this tool but I’m already pretty impressed with what can be achieved.</p>]]></description>
     <pubDate>Mon, 09 Dec 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-12-09-xml-starlet-%28that%27s-what-she-said%29.html</guid>
@@ -141,21 +187,6 @@ because frankly they&#39;re beyond a joke.</code></pre>
 <p>But in the mean time I will have to get used to a new routine with the pain of settling into a new job, learning new things and so forth. Wish me luck.</p>]]></description>
     <pubDate>Fri, 01 Nov 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-11-01-one-job-ends-and-another-begins.html</guid>
-</item>
-<item>
-    <title>Public speaking and presentation: post match analysis</title>
-    <link>http://dougalstanton.net/posts/2013-10-26-public-speaking-post-match-analysis.html</link>
-    <description><![CDATA[<p>My recent <a href="/posts/2013-10-13-aaargh-public-speaking.html" title="Previous thoughts (anxiety) on public speaking">foray into the realm of public speaking</a> went really well. I presented what was initially going to be a 30 minute talk on functional programming, which in the end last for closer to 45 minutes.</p>
-<p>During development the topic changed from Haskell to functional programming in general to, ultimately, code reuse. I used Haskell as an example language to show ways in which custom control-flow operations (from the basic <code>map</code> and <code>fold</code> to the more abstract <code>&gt;&gt;=</code>) lets you write less code with more consistent semantics and pave the way for parallelising code if necessary.</p>
-<p>The <a href="http://github.com/dougalstanton/intro-to-fp/" title="Source for slides and notes">slides and notes are available on GitHub</a>. Both documents are written in Markdown. I used Pandoc with support for the Reveal.js presentation framework to create a slick set of slides. (I think the look of the slides came across really well, compared to the usual Powerpoint fare.)</p>
-<p>I wrote most of the presentation in prose format to begin with so that I had my ideas fully formed. I think this really helped form a cohesive story. In the past I’ve gone straight from “half-baked idea” to “creating slides” and it has been really easy to become confused about what I should be saying at each stage. Coming up with an initial story meant that I really knew what I was trying to say and most of the time knew what slide was coming up next without peeking.</p>
-<p>I am definitely more influenced by the <a href="http://en.wikipedia.org/wiki/Takahashi_method" title="Minimal full-screen slides in the style of Masayoshi Takahashi">Takahashi</a> and Lessig schools of presentation authoring — really minimising the amount of stuff on screen. The other important thing is not to read what is on screen. I think this is where coming up with a narrative first was really helpful: the slides I produced in the end were illustrations of my words, rather than the words being descriptions of my illustrations.</p>
-<p>Obviously the totally-minimalist presentation style isn’t appropriate if you want to show code, which often requires four or five lines of text. But it’s still much better than two columns of small text with bullet points and a graph all on screen at once.</p>
-<p>One thing I did learn from the actual presentation on the day — apart from the need to assume technical difficulties with the projector — is that the colour and detail you get projected onto the wall (even in a dark room) is much worse than the slides on your screen. I did a test run with the television at home but that still didn’t give me a proper idea how bad the final display would be. Err on the side of thicker lines and greater contrast between colours. I had one tree diagram illustrating an inverted tree. The branches of the tree were just black lines and became totally invisible when projected despite looking fine on my screen and on our television.</p>
-<p>The total experience for me was a lot more relaxed than I was expecting. Whether this was due to good preparation, confidence in my knowledge of the subject, more self-confidence or other things that I can’t pinpoint right now, we’ll never know. I felt really in control and for the rest of the day was on a total high.</p>
-<p>The feedback on the presentation was also very positive — that it ran at a measured pace, I didn’t seem flustered or get myself confused, I didn’t try to say five things at once and so on. In general people seemed to believe that I was in control, which in this instance I really felt I was. A miracle.</p>]]></description>
-    <pubDate>Sat, 26 Oct 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-10-26-public-speaking-post-match-analysis.html</guid>
 </item>
 
     </channel> 

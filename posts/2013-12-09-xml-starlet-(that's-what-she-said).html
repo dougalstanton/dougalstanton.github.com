@@ -33,6 +33,18 @@
 <p>The stream editor <code>sed</code> is a great tool for automating text editing — replacing names, date or other statements in a high-speed, programmable fashion.</p>
 <p>One thing it isn’t really cut out for is XML because the structure of XML is not line-oriented. If you want to automate XML editing quickly I totally recommend <a href="http://xmlstar.sourceforge.net" title="XML Starlet Command Line XML Toolkit">XML Starlet</a> for the job. You can replace node names, attributes, values and so on nested deep inside an XML document while paying full heed to namespaces and such.</p>
 <p>On top of that it also lets you see a simple overview and to select values out of documents. Once you get the hang of it you can do some really nice things. I recently got it to rewrite some version numbers inside an Eclipse <code>.cproject</code> file and the resulting script is about as readable and concise as you could hope for.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">xmlsed()</span>
+<span class="kw">{</span>
+    <span class="ot">ATTRIBUTE=$1</span>
+    <span class="ot">VALUE=$2</span>
+    <span class="co"># A quick hack to update build variables used for debug images.</span>
+    <span class="kw">xmlstarlet</span> edit --inplace --update \
+        <span class="st">'//storageModule[@name=&quot;Debug&quot;]/macros/stringMacro[@name=&quot;'</span><span class="ot">$ATTRIBUTE</span><span class="st">'&quot;]/@value'</span> <span class="kw">\</span>
+        <span class="kw">-v</span> <span class="ot">$VALUE</span> .cproject
+<span class="kw">}</span>
+
+<span class="kw">xmlsed</span> DATE_DD <span class="ot">$(</span><span class="kw">date</span> +<span class="st">'%d'</span><span class="ot">)</span>
+<span class="kw">xmlsed</span> COMPILEDBY <span class="ot">$USER</span></code></pre>
 <p>Looking at the examples I have barely touched the surface of what can be done with this tool but I’m already pretty impressed with what can be achieved.</p>
 </section>
 </article>
