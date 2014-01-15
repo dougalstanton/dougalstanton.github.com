@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Looking Out To Sea - Git Checklist: per-branch TODO lists for Git version control</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/default.css" />
+<link rel="stylesheet" type="text/css" href="../style/syntax.css" />
+<link rel="alternate" type="application/rss+xml" href="../rss.xml" title="Dougal's blog" />
+<link rel="alternate" type="application/atom+xml" href="../atom.xml" title="Dougal's blog" />
+</head>
+
+<body>
+<div id="blog">
+
+<header>
+<h1>Looking Out To Sea</h1>
+</header>
+
+<nav>
+<menu id="page_menu">
+    <a href="../index.html">home</a> —
+    <a href="../about.html">about</a> —
+    <a href="../projects.html">projects</a> —
+    <a href="../archive.html">archive</a>
+</menu>
+</nav>
+
+<article>
+<h2>Git Checklist: per-branch TODO lists for Git version control</h2>
+<section>
+<p>I developed <a href="http://github.com/dougalstanton/git-checklist" title="The git-checklist repository on GitHub">git-checklist</a> as a way to keep track of the steps I needed to complete before I could merge a feature branch back into <code>master</code>. It’s particularly useful if you juggle several branches at once and have to swap as various things block further progress — you want to remember which things you’ve done and which are still to go. On top of that you might be working from a moving-target specification (perish the thought) so extra tasks might crop up as you go along. This gives you a great way of keeping track of all these notes right where you need them — in your git branch.</p>
+<p>Example usage:</p>
+<pre><code>$ git checklist
+1. [x] Check spelling of 'frobnicator' for widget
+2. [ ] Replace Lorem Ipsum with real content
+3. [x] Validate min and max sizes
+
+$ git checklist done 2
+1. [x] Check spelling of 'frobnicator' for widget
+2. [x] Replace Lorem Ipsum with real content
+3. [x] Validate min and max sizes
+
+$ git checklist add Write tests for min and max size checks
+1. [ ] Write tests for min and max size checks
+2. [x] Check spelling of 'frobnicator' for widget
+3. [x] Replace Lorem Ipsum with real content
+4. [x] Validate min and max sizes</code></pre>
+<p>If this seems like the kind of thing you might use, please do so!</p>
+<ul>
+<li><a href="http://github.com/dougalstanton/git-checklist" title="The git-checklist repository on GitHub">GitHub repository</a> with further examples</li>
+<li><a href="http://hackage.haskell.org/package/git-checklist" title="Download and build from Hackage">Hackage download</a></li>
+</ul>
+</section>
+</article>
+
+</div>
+</body>
+
+</html>
