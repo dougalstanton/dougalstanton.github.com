@@ -6,8 +6,23 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 25 Jan 2014 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Jan 2014 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Write code to write posts to write code</title>
+    <link>http://dougalstanton.net/posts/2014-01-28-write-code-to-write-posts-to-write-code.html</link>
+    <description><![CDATA[<p>There is a belief among certain programmers that if you’re having a problem with your code you should sit someone down and talk them through it — and that during the explanation your problem will become apparent to you. The very act of organising your thoughts enough to verbalise them will bring the issue to light.</p>
+<p>Some people take this to an extreme and believe that since the listener doesn’t need to be an active participant (they don’t need to prompt you or seek clarification, just listen) they don’t even need to be there at all. Or at least, they don’t need to be an actual person. And so was born <a href="http://en.wikipedia.org/wiki/Rubber_duck_debugging" title="Rubber duck debugging, defined by Wikipedia">rubber ducking</a> — the process of solving your problems by explaining them to a rubber duck. Now don’t anyone ever tell me that programmers have a problem talking to others!</p>
+<p>I mention this because writing about programming is a similarly intense way of making you really think through the code. But instead of making you solve your problems it brings you face to face with the ugliness of your code. In the past if I’ve been blogging about code I end up making little “cosmetic edits” after I’ve pasted code snippets into my document. As the edits get bolder the chance of introducing an inconsistency or a flaw into the code becomes higher. Before you know it you’re writing about beautiful but buggy code.</p>
+<p>The only way to stop this from happening is by making sure that the changes made to the code are compiled after every edit. For my last post about using QuickCheck with C and C++ I spent a fair amount of time writing an extra bit of function for the blogging software to include the source into post “by reference”:</p>
+<pre><code>```{.cpp include=&quot;path/to/file&quot;}
+```</code></pre>
+<p>Hakyll doesn’t do this as standard but luckily PanDoc (which is used for format conversion under the hood) is programmable and even includes this very example in the tutorial.</p>
+<p>This left me with another problem, which is that I needed to “compile” the page in order to preview it at all. So I ended up making more changes to compile draft documents and keep them separate from real blog posts. Basically I ended up doing a <em>lot</em> of faffing to write that last post.</p>
+<p>And after all that I still feel the urge to paste in the code that I used to do it. But then I’d inevitably want to fiddle, and so we end up where we started.</p>]]></description>
+    <pubDate>Tue, 28 Jan 2014 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2014-01-28-write-code-to-write-posts-to-write-code.html</guid>
+</item>
+<item>
     <title>Testing embedded C++ with Haskell QuickCheck</title>
     <link>http://dougalstanton.net/posts/2014-01-25-quickcheck-tests-for-c-cpp-code.html</link>
     <description><![CDATA[<p>If you work with C or C++ and are hankering after the testing power of <a href="http://hackage.haskell.org/package/QuickCheck" title="A library for random testing of program properties">QuickCheck for property tests</a>, this is your lucky day.</p>
@@ -351,31 +366,6 @@ Foo {fooBar = 1, fooBaz = -1, fooQuux = [-1,-1,0,0]}</code></pre>
 </div>]]></description>
     <pubDate>Sat, 09 Nov 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-11-09-roda-with-glasgow-senzala-and-professor-ourico.html</guid>
-</item>
-<item>
-    <title>Writing: from LaTeX to nae tech</title>
-    <link>http://dougalstanton.net/posts/2013-11-04-writing-from-latex-to-nae-tech.html</link>
-    <description><![CDATA[<p>I’ve always been quite fond of <a href="http://www.latex-project.org" title="LaTeX: A document preparation system">LaTeX</a> as an environment for composing long text, particularly since you can use whichever text editor you prefer and aren’t tied to any particular user interface. The output is also pretty high quality.</p>
-<p>The downsides can’t be ignored, however. The language itself is one of those tales which grew in the telling — the result being a Turing complete macro language which isn’t really designed as a programming language but nor is it a particularly friendly markup language.</p>
-<p>Also since most people use the LaTeX system on top of TeX there’s a certain degree to which the two are confused. There is no clean layer of abstraction since you can mix the two freely (to confusing result, in many cases).</p>
-<p>Lately I’ve been using LaTeX as a backend for final document production but composing all of the documents themselves in Markdown-formatted text files. The conversion from one to the other comes courtesy of <a href="http://johnmacfarlane.net/pandoc/" title="Markup format-conversion swiss-army knife">PanDoc</a>, which is frankly the greatest thing since jammy pieces.</p>
-<p>I’ve just finished putting together a nice system for writing letters using the two, which <a href="https://github.com/dougalstanton/scripts" title="Repository of little scripts and tools">I’ve uploaded to GitHub</a> alongside some instructions. The basic idea is that you drop the three files in your <code>~/bin</code> and the private <code>.pandoc</code> directory. There are a couple of places you should configure to enter your own settings, such as your name and home address.</p>
-<p>The result uses the LaTeX “letter” document class to create nice PDFs without you needing to remember how the LaTeX nonsense works. You just type in some basic paragraphs, maybe without formatting of any kind, and the two systems deal with everything for you.</p>
-<p>An example:</p>
-<pre class="markdown"><code>---
-to-name: Santa
-to-address: [Santa Claus, Santa&#39;s Grotto, The North Pole]
----
-
-I know it&#39;s only February but I&#39;ve been
-very good this year and would like to put
-in my request early. It would be great if
-you could fix those potholes on Leith Walk
-because frankly they&#39;re beyond a joke.</code></pre>
-<p>If you leave out the “to-name” field it uses “Dear Sir or Madam” and closes with “Yours faithfully” automatically. I suppose the next step would be to customise the greeting and closing so you could write less formal letters (“Yours sincerely” is about as friendly as it gets) but that’s not much of a priority. If you’re going to write something casual you can probably write it by hand!</p>
-<p>I’ve done a quick test recreating some letters I wrote in the past. Hardly the most rigorous of testing regimes but the principle is proven I think and I’ll definitely be using it in future.</p>]]></description>
-    <pubDate>Mon, 04 Nov 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-11-04-writing-from-latex-to-nae-tech.html</guid>
 </item>
 
     </channel> 
