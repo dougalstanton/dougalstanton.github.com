@@ -6,8 +6,20 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Mon, 17 Feb 2014 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 27 Feb 2014 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Jane Eyre and norovirus: the truth they don't want you to know</title>
+    <link>http://dougalstanton.net/posts/2014-02-27-jane-eyre-and-norovirus%3A-the-truth.html</link>
+    <description><![CDATA[<div class="figure">
+<img src="http://farm4.staticflickr.com/3526/3767252642_51c7de05e7.jpg" alt="Pickwick the Dodo" /><p class="caption">Pickwick the Dodo</p>
+</div>
+<p>Several years ago I was reading <em>Jane Eyre</em> while staying at a friend’s house prior to us all attending a wedding nearby. The night before the wedding I was very ill — and spent the night vomiting loudly to prove it. The next day while the others were at the wedding I lay in bed, dozing and reading my book.</p>
+<p>After book group this weekend I decided to re-read <em>The Eyre Affair</em>, a comedy detective novel which uses <em>Jane Eyre</em> as a principal plot point. On Tuesday morning I was again violently ill and spent the next day in bed, drifting in and out of sleep and reading.</p>
+<p>Now I don’t want to start pointing fingers or naming names here but there’s something quite suspicious about all this and in future I’ll be laying off <em>Jane Eyre</em> and <em>Jane Eyre</em> derivatives for the sake of my health.</p>]]></description>
+    <pubDate>Thu, 27 Feb 2014 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2014-02-27-jane-eyre-and-norovirus%3A-the-truth.html</guid>
+</item>
+<item>
     <title>Critical appraisal from the inside</title>
     <link>http://dougalstanton.net/posts/2014-02-17-critical-appraisal-from-the-inside.html</link>
     <description><![CDATA[<p>On Tuesday we were at PITCH, an evening of new modern dance and related arts put on by <a href="http://www.conflux.co.uk/" title="Conflux Scotland, street art and physical theatre">Conflux Scotland</a>. The specific reason we knew about the event was because <a href="https://www.facebook.com/shady.phil.7" title="Shady Phil on Facebook">Shady Phil</a> (or <a href="https://www.facebook.com/spottedstripescircus" title="Spotted Stripes Circus">one of his other guises</a>, at least) was performing a piece.</p>
@@ -349,19 +361,6 @@ Foo {fooBar = 1, fooBaz = -1, fooQuux = [-1,-1,0,0]}</code></pre>
 <p>But first I think we should just start with the basics: a straight-forward sequence and some extended play. I must remember to pack the pandeiro.</p>]]></description>
     <pubDate>Mon, 25 Nov 2013 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2013-11-25-closed-doors-training-sessions.html</guid>
-</item>
-<item>
-    <title>Life as a game, measured in blog posts and coffee spoons</title>
-    <link>http://dougalstanton.net/posts/2013-11-18-life-as-a-game-measured-in-blog-posts.html</link>
-    <description><![CDATA[<p>I’ve tried in the past to get into tools like <a href="http://www.fitocracy.com" title="Fitocracy, levelling-up your fitness?">Fitocracy</a>, whose gimmick is to make exercise a game in which you increase your high score by recording the physical workouts you do. I failed to get much satisfaction out of it for a couple of key reasons:</p>
-<ul>
-<li>My cycling doesn’t really change, so while I do about 9 miles a day it never goes above that. The total miles covered keeps going up, which does afford more points, but I feel a bit of a fraud all along. I’m not getting faster and I’m not increasing my distance either.</li>
-<li>Capoeira is a dynamic skill-based activity which does not lend itself to measurement with simple numbers like distance, time, mass or speed. To use an analogy, if I could run around really fast and hit tennis balls really hard neither of these would demonstrate I was progressing at tennis. Similarly someone with a less impressive serve and a slower dash could still trounce me if they had actual tennis experience.</li>
-</ul>
-<p>I still have a Fitocracy account but I don’t do things which measure easily so I never use it.</p>
-<p>Nick recently posted on this, <a href="http://harveynick.com/blog/2013/09/14/am-i-winning/" title="Some thoughts on Gamification">expanding the notion from simple fitness</a> to diverse aspects of life.</p>]]></description>
-    <pubDate>Mon, 18 Nov 2013 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2013-11-18-life-as-a-game-measured-in-blog-posts.html</guid>
 </item>
 
     </channel> 
