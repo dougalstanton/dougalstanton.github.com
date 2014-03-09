@@ -8,8 +8,19 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2014-03-07T00:00:00Z</updated>
+    <updated>2014-03-09T00:00:00Z</updated>
     <entry>
+    <title>Someone put a massive mountain there</title>
+    <link href="http://dougalstanton.net/posts/2014-03-09-someone-put-a-massive-mountain-there.html" />
+    <id>http://dougalstanton.net/posts/2014-03-09-someone-put-a-massive-mountain-there.html</id>
+    <published>2014-03-09T00:00:00Z</published>
+    <updated>2014-03-09T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>Situation report from the scene, live as it happens! It’s 6pm on the end of my first day in the French Alps. The sun was bright and if the weather continues like this I’m going to be wearing a lot less on the slopes than I initially thought.</p>
+<p>I spent the morning and afternoon with <a href="http://www.esf.net" title="Ecole du ski francais">École du Ski Franiçais</a> as an “adulte debutant” — ie, adult beginner. I’m slowly dredging up bits of French and learning new words (<em>batons</em> for ski poles and <em>casque</em> for helmet). The instructors would translate things into English but on many occasions it wasn’t necessary.</p>
+<p>For lunch I had croque monsieur, frites avec mayonnaise and biere. Again I tried to be quite confident and the words more or less made sense to everyone so that’s quite good.</p>
+<p>It seems unlikely I will be able to co-ordinate a lunchtime meeting with Helen and her family as I’m totally without phone service both in the village and in the mountains. Hopefully we’re organise something in advance one day, although at the moment I’m still pretty much clueless about getting around. It’ll have to be a really obvious and central meeting point or I won’t have a clue.</p>]]></summary>
+</entry>
+<entry>
     <title>Capoeira introductory sessions</title>
     <link href="http://dougalstanton.net/posts/2014-03-07-capoeira-introductory-sessions.html" />
     <id>http://dougalstanton.net/posts/2014-03-07-capoeira-introductory-sessions.html</id>
@@ -361,17 +372,6 @@ Foo {fooBar = 1, fooBaz = -1, fooQuux = [-1,-1,0,0]}</code></pre>
 <span class="kw">xmlsed</span> DATE_DD <span class="ot">$(</span><span class="kw">date</span> +<span class="st">&#39;%d&#39;</span><span class="ot">)</span>
 <span class="kw">xmlsed</span> COMPILEDBY <span class="ot">$USER</span></code></pre>
 <p>Looking at the examples I have barely touched the surface of what can be done with this tool but I’m already pretty impressed with what can be achieved.</p>]]></summary>
-</entry>
-<entry>
-    <title>What is capoeira anyway?</title>
-    <link href="http://dougalstanton.net/posts/2013-12-01-what-is-capoeira-anyway.html" />
-    <id>http://dougalstanton.net/posts/2013-12-01-what-is-capoeira-anyway.html</id>
-    <published>2013-12-01T00:00:00Z</published>
-    <updated>2013-12-01T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Doing something obscure like capoeira comes with the risk of being asked what it is. Unlike karate or BASE jumping or African drumming the answer is neither common knowledge nor easily to summarise. Nestor Capoeira called it the dance–fight–game, which I will go out on a limb as being a pretty atrocious description while at the same time being totally true. Work that one out.</p>
-<p>I have previously called it “an Afro-Brazilian martial art crossing the boundaries of game, dance, ritual and fight”, which is not much better to be honest. It just expands on Nestor’s definition by adding the word <em>ritual</em> in there.</p>
-<p>The various elements all vying for inclusion in a good description — movement, music, play, acrobatics, song, ritual, fight, dance — are just as much in opposition in definition as they are in capoeira itself. What is playful about a fight? What is ritualised about play? What is acrobatic about song? What is musical about movement?</p>
-<p>Maybe the answer is to describe only what you see. It is a game of two people in a circle of others. The crowd who form the circle produce music which dictates the mood of the activity in the circle. The two inside move to the rhythms, controlling the space and responding to each others’ movements. The interaction can be aggressive or playful and is often both in quick succession. The game ends when either players or music stop. There are no points to be tallied or need to decide a winner: it is played for the sake of the game itself.</p>]]></summary>
 </entry>
 
 </feed>
