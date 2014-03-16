@@ -9,6 +9,18 @@
 <link rel="stylesheet" type="text/css" href="../style/syntax.css" />
 <link rel="alternate" type="application/rss+xml" href="../rss.xml" title="Dougal's blog" />
 <link rel="alternate" type="application/atom+xml" href="../atom.xml" title="Dougal's blog" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49029697-1', 'dougalstanton.net');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
 <body>
@@ -37,7 +49,7 @@
 <p>I’ve just finished putting together a nice system for writing letters using the two, which <a href="https://github.com/dougalstanton/scripts" title="Repository of little scripts and tools">I’ve uploaded to GitHub</a> alongside some instructions. The basic idea is that you drop the three files in your <code>~/bin</code> and the private <code>.pandoc</code> directory. There are a couple of places you should configure to enter your own settings, such as your name and home address.</p>
 <p>The result uses the LaTeX “letter” document class to create nice PDFs without you needing to remember how the LaTeX nonsense works. You just type in some basic paragraphs, maybe without formatting of any kind, and the two systems deal with everything for you.</p>
 <p>An example:</p>
-<pre class="markdown"><code>---
+<pre class="sourceCode markdown"><code class="sourceCode markdown">---
 to-name: Santa
 to-address: [Santa Claus, Santa's Grotto, The North Pole]
 ---

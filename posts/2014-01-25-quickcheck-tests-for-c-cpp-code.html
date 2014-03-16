@@ -9,6 +9,18 @@
 <link rel="stylesheet" type="text/css" href="../style/syntax.css" />
 <link rel="alternate" type="application/rss+xml" href="../rss.xml" title="Dougal's blog" />
 <link rel="alternate" type="application/atom+xml" href="../atom.xml" title="Dougal's blog" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49029697-1', 'dougalstanton.net');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
 <body>
@@ -119,39 +131,39 @@ size_t deserialise (<span class="dt">const</span> <span class="dt">uint8_t</span
 <pre class="sourceCode haskell" include="includes/ffi-intro/Foo.hsc"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE ForeignFunctionInterface #-}</span>
 <span class="kw">module</span> <span class="dt">Foo</span> <span class="kw">where</span>
 
-<span class="fu">#</span>include <span class="st">&quot;foo.h&quot;</span>
+<span class="st">#</span><span class="kw">include</span><span class="st"> &quot;foo.h&quot;</span>
 
-<span class="kw">import</span> Foreign <span class="kw">hiding</span> (unsafePerformIO)
-<span class="kw">import</span> Foreign.Marshal.Array
-<span class="kw">import</span> Foreign.Storable
-<span class="kw">import</span> System.IO.Unsafe (unsafePerformIO)
+<span class="kw">import </span><span class="dt">Foreign</span> <span class="kw">hiding</span> (unsafePerformIO)
+<span class="kw">import </span><span class="dt">Foreign.Marshal.Array</span>
+<span class="kw">import </span><span class="dt">Foreign.Storable</span>
+<span class="kw">import </span><span class="dt">System.IO.Unsafe</span> (unsafePerformIO)
 
 <span class="kw">data</span> <span class="dt">Foo</span> <span class="fu">=</span> <span class="dt">Foo</span>
-    {<span class="ot"> fooBar  ::</span> <span class="fu">#</span>{<span class="kw">type</span> uint32_t}
-    ,<span class="ot"> fooBaz  ::</span> <span class="fu">#</span>{<span class="kw">type</span> int8_t}
-    ,<span class="ot"> fooQuux ::</span> [<span class="fu">#</span>{<span class="kw">type</span> int8_t}]
+    {<span class="ot"> fooBar  ::</span> <span class="st">#{type uint32_t}</span>
+    ,<span class="ot"> fooBaz  ::</span> <span class="st">#{type int8_t}</span>
+    ,<span class="ot"> fooQuux ::</span> [<span class="st">#{type int8_t}]</span>
     } <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Show</span>)
 
 <span class="kw">instance</span> <span class="dt">Storable</span> <span class="dt">Foo</span> <span class="kw">where</span>
-    sizeOf _    <span class="fu">=</span> <span class="fu">#</span>{size foo_t}
+    sizeOf _    <span class="fu">=</span> <span class="st">#{size foo_t}</span>
     alignment _ <span class="fu">=</span> alignment (undefined<span class="ot"> ::</span> <span class="dt">Word32</span>)
 
     peek ptr <span class="fu">=</span> <span class="kw">do</span>
-        r1 <span class="ot">&lt;-</span> <span class="fu">#</span>{peek foo_t, bar} ptr
-        r2 <span class="ot">&lt;-</span> <span class="fu">#</span>{peek foo_t, baz} ptr
-        r3 <span class="ot">&lt;-</span> peekArray <span class="dv">4</span> <span class="fu">$</span> <span class="fu">#</span>{ptr foo_t, quux} ptr
+        r1 <span class="ot">&lt;-</span> <span class="st">#{peek foo_t, bar} ptr</span>
+        r2 <span class="ot">&lt;-</span> <span class="st">#{peek foo_t, baz} ptr</span>
+        r3 <span class="ot">&lt;-</span> peekArray <span class="dv">4</span> <span class="fu">$</span> <span class="st">#{ptr foo_t, quux} ptr</span>
         return (<span class="dt">Foo</span> r1 r2 r3)
 
     poke ptr (<span class="dt">Foo</span> r1 r2 r3) <span class="fu">=</span> <span class="kw">do</span>
-        <span class="fu">#</span>{poke foo_t, bar} ptr r1
-        <span class="fu">#</span>{poke foo_t, baz} ptr r2
-        pokeArray (<span class="fu">#</span>{ptr foo_t, quux} ptr) r3
+        <span class="st">#{poke foo_t, bar} ptr r1</span>
+        <span class="st">#{poke foo_t, baz} ptr r2</span>
+        pokeArray (<span class="st">#{ptr foo_t, quux} ptr) r3</span>
 
 <span class="kw">type</span> <span class="dt">Buffer</span> <span class="fu">=</span> [<span class="dt">Word8</span>]
 
-foreign <span class="kw">import</span> ccall &quot;foo.h serialise&quot;
+foreign <span class="kw">import </span>ccall &quot;foo.h serialise&quot;
 <span class="ot">    c_serialise ::</span> <span class="dt">Ptr</span> <span class="dt">Foo</span> <span class="ot">-&gt;</span> <span class="dt">Ptr</span> <span class="dt">Word8</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">Int</span>
-foreign <span class="kw">import</span> ccall &quot;foo.h deserialise&quot;
+foreign <span class="kw">import </span>ccall &quot;foo.h deserialise&quot;
 <span class="ot">    c_deserialise ::</span> <span class="dt">Ptr</span> <span class="dt">Word8</span> <span class="ot">-&gt;</span> <span class="dt">Ptr</span> <span class="dt">Foo</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">Int</span>
 
 <span class="ot">serialise ::</span> <span class="dt">Foo</span> <span class="ot">-&gt;</span> <span class="dt">Buffer</span>
@@ -181,9 +193,9 @@ deserialise buf <span class="fu">=</span> unsafePerformIO <span class="fu">$</sp
 <p>All that’s needed now is your tests. If the code you are testing does not maintain state then all the better: you can wrap the FFI calls in <code>unsafePerformIO</code> to convince the type system that they’re pure computations. The Haskell compiler doesn’t know the external code is pure so this is your promise to the type system that it <em>is</em> pure. If you are in fact lying (or in error) then you may find odd behaviour or crashes.</p>
 <pre class="sourceCode haskell" include="includes/ffi-intro/Main.hs"><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">Main</span> <span class="kw">where</span>
 
-<span class="kw">import</span> Foo
+<span class="kw">import </span><span class="dt">Foo</span>
 
-<span class="kw">import</span> Test.QuickCheck
+<span class="kw">import </span><span class="dt">Test.QuickCheck</span>
 
 <span class="kw">instance</span> <span class="dt">Arbitrary</span> <span class="dt">Foo</span> <span class="kw">where</span>
     arbitrary <span class="fu">=</span> <span class="kw">do</span>
