@@ -8,8 +8,21 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2014-03-13T00:00:00Z</updated>
+    <updated>2014-03-30T00:00:00Z</updated>
     <entry>
+    <title>Getting rid of bikes. Is that even allowed?</title>
+    <link href="http://dougalstanton.net/posts/2014-03-30-getting-rid-of-bikes.html" />
+    <id>http://dougalstanton.net/posts/2014-03-30-getting-rid-of-bikes.html</id>
+    <published>2014-03-30T00:00:00Z</published>
+    <updated>2014-03-30T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>Ha! In direct contravention of <a href="http://www.velominati.com/the-rules/#12" title="Rule 12">rule number twelve</a> we just got rid of two bikes. That probably means the number of bikes we need stands at N+2 just to reach parity with where we were yesterday. We do have a lot more space in the hallway now, which is nice!</p>
+<p>The decluttering is part one (the easy part) of preparations to move back to Edinburgh. More on that as we get closer to the departure point.</p>
+<p>The bikes — Helen’s old bike and my old bike — went to the Glasgow Bike Station. My bike was bought from the Edinburgh Bike Station a few years ago to see if cycling would be a reasonable addition to my commute. Since then there was been no looking back (well, except to check traffic over my shoulder). Helen’s old bike was won by her gran in a raffle and she’s had it over fifteen years! So it was a more important moment to pass her bike on.</p>
+<p>Riding down there was really scary, which surprised me. The whole feel of the bike which used to be my daily transport was totally alien because I’d not used it for more than a year. The geometry was odd. The handlebar felt too short, the position of the pedals was different and the circle they made seemed smaller than my current bike. The pedals were simple platforms and I kept trying to adjust my foot position as if there were toe traps. On top of that the brake blocks were pretty close to the nub so I wasn’t in the least confident that I could really pull off an emergency stop if required. Helen nearly fell off before starting, by instinctively reaching for drop bars which didn’t exist and tipping through the bike! But we both made the journey in one piece and walked away for afternoon tea at The Hidden Lane Tea Room.</p>
+<p>The Bike Station will be able to refurbish or cannabalise the bikes as necessary and sell on bikes to more people, like me, looking for a cheap bike to get around.</p>
+<p>I’ll have to think about what the N+2 might be for another blog post…</p>]]></summary>
+</entry>
+<entry>
     <title>I keep trying to not fall over and it's mostly a success</title>
     <link href="http://dougalstanton.net/posts/2014-03-13-i-keep-trying-to-not-fall-over.html" />
     <id>http://dougalstanton.net/posts/2014-03-13-i-keep-trying-to-not-fall-over.html</id>
@@ -332,41 +345,6 @@ $ ./tests
 Falsifiable (after 1 test): 
 Foo {fooBar = 1, fooBaz = -1, fooQuux = [-1,-1,0,0]}</code></pre>
 <p>Oh dear! Not a great outcome there… But now you can load up GHCi and manually run that test to see what result you get when serialising and deserialising, examining the intermediate data and ultimately tracking down the bug.</p>]]></summary>
-</entry>
-<entry>
-    <title>The Moriarty Hypothesis</title>
-    <link href="http://dougalstanton.net/posts/2013-12-31-the-moriarty-hypothesis.html" />
-    <id>http://dougalstanton.net/posts/2013-12-31-the-moriarty-hypothesis.html</id>
-    <published>2013-12-31T00:00:00Z</published>
-    <updated>2013-12-31T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<div class="figure">
-<img src="http://farm2.staticflickr.com/1330/3174009125_ec49351a6d_d.jpg" />
-</div>
-<p>Sherlock Holmes appears in over fifty short stories and a few full-length novels. Only two of these stories contain his nemesis, Professor James Moriarty. Sir Arthur Conan Doyle introduced Moriarty in the story in which both disappear, grappling with each other as they topple over the Reichenbach Falls. Only after years of public pressure does Conan Doyle relent and bring Holmes back for another story.</p>
-<ol style="list-style-type: decimal">
-<li>Moriarty is the author’s mechanism to kill off Sherlock Holmes.</li>
-</ol>
-<p>The remainder of the Sherlock Holmes stories relate to him solving puzzles and outwitting criminals who are intelligent but not as intelligent as Holmes. These are the stories which made him famous and popular — <em>A Study in Scarlet</em>, <em>The Sign of the Four</em> etc. As readers we wish to marvel at the complex criminal schemes which Holmes can unravel with a single observation.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Holmes is popular because he solves puzzles unlike any normal person.</li>
-</ol>
-<p>Holmes was never an armchair detective — that role was filled by his brother Mycroft — but his action and adventure was in the name of solving the problem. If he could tell Inspector Lestrade where to send his men instead of doing the work himself that was all the better. He rarely took the role of chasing down criminals unless he was already in an encounter with them.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Holmes is not a James Bond action hero but a detective.</li>
-</ol>
-<p>Sherlock Holmes re-appears in countless radio, television and big screen adaptations. In many cases Moriarty exists as a malevolent presence which Holmes acknowledges from the beginning. Sooner or later the evil mastermind comes out of the shadows and the two meet. Of course a criminal mastermind is never as scary face-to-face as when hidden in the shadows so straight away Moriarty becomes less scary. Writers often attempt to compensate by making Moriarty appear unhinged and gruesome.</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Moriarty is less scary in the light than in the shadows.</li>
-</ol>
-<p>Sherlock Holmes is a master of observation and deduction. He has a vast knowledge of obscure forensic data stored in his brain. Similarly Professor Moriarty is a criminal mastermind who subtly and imperceptibly controls the underworld in London and beyond. It is difficult but not impossible to create situations in which either one of them will appear as intelligent as they should but to show two vast intellects attempting to outwit each other is tricky beyond measure: both should appear to be more intelligent than the audience at all times.</p>
-<ol start="5" style="list-style-type: decimal">
-<li>Moriarty battling Holmes is incredibly hard to write convincingly.</li>
-</ol>
-<p>Moriarty attempts revenge on Sherlock Holmes whenever a plan is foiled. This was his original role — to kill off Holmes for meddling in his schemes. But if Moriarty is introduced at the start he is always involved and quickly comes for revenge. This quickly turns a detective story into an adventure. Holmes turns into Bond. The detecting disappears and is replaced by gunfights, explosions and chases across train roofs. All exciting stuff but stuff we’ve seen before, elsewhere. Stuff that we don’t watch Sherlock Holmes stories for.</p>
-<ol start="6" style="list-style-type: decimal">
-<li>Conclusion: Professor Moriarty ruins Sherlock Holmes.</li>
-</ol>
-<p>Of course (6) should not be a surprise. We knew this from (1). Moriarty was <em>designed</em> to ruin Holmes.</p>]]></summary>
 </entry>
 
 </feed>
