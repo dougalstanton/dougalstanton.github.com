@@ -6,8 +6,27 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sun, 30 Mar 2014 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sat, 05 Apr 2014 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Grammar of movement</title>
+    <link>http://dougalstanton.net/posts/2014-04-05-grammar-of-movement.html</link>
+    <description><![CDATA[<p>I wrote recently about <a href="/posts/2014-02-17-critical-appraisal-from-the-inside.html" title="My thoughts on Phil&#39;s performance at Conflux PITCH">Phil’s performance at the Conflux PITCH event</a> and how I had a hard time writing a meaningful critical appraisal. One of the issues was seeing the capoeira inside his performance and not being able to see past that.</p>
+<p>One of the other performers that day was <a href="http://www.iamscotthouston.com/" title="Scott Houston&#39;s home page">Scott Houston</a>. Superficially he appears to share a lot of the same movements but it appears from his biography online that he has no capoeira training. He’s probably come across capoeira but it’s not a meaningful part of his background. Can we tell this by watching the way he moves? I think we can and it’s most obvious in this video, <em>Alive</em>.</p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/oBh7ASo1UIE" frameborder="0" allowfullscreen></iframe>
+
+<p>Like learning a language you pick up a great deal of capoeira through imitation rather than explicit instruction. The challenge of anyone learning capoeira or anything else by imitation is learning to identify what are the real rules and what are just things which your role models don’t do — things which you can’t learn by imitation because you don’t have anyone to imitate<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Like a language, capoeira has a “grammar” and much of it is learned implicitly. After a while we all begin to speak (or move) in ways which are in tune with what we’re doing — the grammar becomes internalised and we no longer think “does this sound/feel right?”.</p>
+<p>I think one of the main differences between Phil and Scott’s performances was that Phil has the capoeira grammar deep in his movement and has to struggle more to overcome that. (I predict that if I had any knowledge of gymnastics or Shotokan Karate then I might see their influence on Scott Houston’s movement. Any takers?) The director/ choreographer who spoke at the Conflux event mentioned specifically that he likes using artists outside their comfort zone to avoid the ingrained behaviours from taking over. Dancers always end up standing in the classic ballet postures — toes pointed, arms slight bent. Gymnasts have their own favoured postures and so on with all the other physical performance artists. Using people who haven’t been trained specifically produces a looseness of interpretation — at least according to this director’s opinion.</p>
+<p>From the perspective of someone trying to learn capoeira this is also important. The movement culture in Scotland and Brazil is different — Scottish dance and Brazilian dance emphasise very different things in posture, for example. Unlearning the way in which we move and hold our bodies is almost even harder — I’ve been standing and walking this way in this mould my entire life, since I was old enough to imitate the movement of my parents. Seeing total capoeira beginners with experience of other movement forms brings other fascinating layers to the mix — whether they’ve done Taekwondo or belly dancing the outcome is something bold and original. And bringing something new to it is what we should all strive for!</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This is why I think it’s really important to have many role models in a class. Different people of different shapes and sizes who have different preferences for the ways in which they move — not only do you see a wider range of possibilities from which to synthesise your own style but you can also see how people play to their strengths and overcome their weaknesses — be it fitness, height, strength, or something else.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>]]></description>
+    <pubDate>Sat, 05 Apr 2014 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2014-04-05-grammar-of-movement.html</guid>
+</item>
+<item>
     <title>Getting rid of bikes. Is that even allowed?</title>
     <link>http://dougalstanton.net/posts/2014-03-30-getting-rid-of-bikes.html</link>
     <description><![CDATA[<p>Ha! In direct contravention of <a href="http://www.velominati.com/the-rules/#12" title="Rule 12">rule number twelve</a> we just got rid of two bikes. That probably means the number of bikes we need stands at N+2 just to reach parity with where we were yesterday. We do have a lot more space in the hallway now, which is nice!</p>
@@ -134,205 +153,6 @@
 <p>And after all that I still feel the urge to paste in the code that I used to do it. But then I’d inevitably want to fiddle, and so we end up where we started.</p>]]></description>
     <pubDate>Tue, 28 Jan 2014 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2014-01-28-write-code-to-write-posts-to-write-code.html</guid>
-</item>
-<item>
-    <title>Testing embedded C++ with Haskell QuickCheck</title>
-    <link>http://dougalstanton.net/posts/2014-01-25-quickcheck-tests-for-c-cpp-code.html</link>
-    <description><![CDATA[<p>If you work with C or C++ and are hankering after the testing power of <a href="http://hackage.haskell.org/package/QuickCheck" title="A library for random testing of program properties">QuickCheck for property tests</a>, this is your lucky day.</p>
-<p>If you’ve got C++ code you have to bear a couple of things in mind. If it’s vanilla C then you’re okay.</p>
-<ul>
-<li>The code under test needs to be C-compatible, so using <code>extern C</code> otherwise the name mangler will prevent your linker from finding the correct symbols.</li>
-<li>You have to manage the compilation steps manually or using an ordinary Makefile. The CABAL system doesn’t recognise <code>.cpp</code> files so won’t process them properly on its own.</li>
-</ul>
-<p>These are not grave restrictions by any means. This is how it’s done. First, we will see the files we have to start with. These are the ones which we have to write and cannot be autogenerated:</p>
-<ul>
-<li>foo.cpp</li>
-<li>foo.h</li>
-<li>Foo.hsc</li>
-<li>Main.hs</li>
-</ul>
-<p>The first two comprise your “system under test”. The next two are the Haskell/C bridge file which handles marshalling and the Haskell test executable. As your system gets more complex you might obviously add to these.</p>
-<p>I will work through this list of files in order, showing what they contain and how they can be used to generate further dependencies until the test system is complete.</p>
-<h3 id="some-code-to-test">Some code to test</h3>
-<p>First we have the C++ code we’re testing. I’m going to use the example of data transfer over a network. We’ve got some data structure which we need to transmit or receive. A simple way of testing whether we are internally consistent is making sure we can always decode the same data we encoded. This is the “round trip” test.</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext mathvariant="monospace">id</mtext><mo>=</mo><mtext mathvariant="monospace">deserialise</mtext><mo>⋅</mo><mtext mathvariant="monospace">serialise</mtext></mrow></math></p>
-<p>So <code>foo.cpp</code> contains a simple struct and a pair of functions that should operate as a “round trip”, serialising and then deserialising the input.</p>
-<pre class="sourceCode cpp" include="includes/ffi-intro/foo.cpp"><code class="sourceCode cpp"><span class="ot">#include &quot;foo.h&quot;</span>
-
-size_t serialise (<span class="dt">const</span> <span class="kw">struct</span> foo * in, <span class="dt">uint8_t</span> * out)
-{
-    out[<span class="dv">0</span>] = in-&gt;bar &amp; <span class="bn">0x000000ff</span>;
-    out[<span class="dv">1</span>] = (in-&gt;bar &amp; <span class="bn">0x0000ff00</span>) &gt;&gt; <span class="dv">8</span>;
-    out[<span class="dv">2</span>] = (in-&gt;bar &amp; <span class="bn">0x00ff0000</span>) &gt;&gt; <span class="dv">16</span>;
-    out[<span class="dv">3</span>] = (in-&gt;bar &amp; <span class="bn">0xff000000</span>) &gt;&gt; <span class="dv">24</span>;
-    out[<span class="dv">4</span>] = in-&gt;baz;
-    out[<span class="dv">5</span>] = in-&gt;quux[<span class="dv">0</span>];
-    out[<span class="dv">6</span>] = in-&gt;quux[<span class="dv">1</span>];
-    out[<span class="dv">7</span>] = in-&gt;quux[<span class="dv">2</span>];
-    out[<span class="dv">8</span>] = in-&gt;quux[<span class="dv">3</span>];
-    <span class="kw">return</span> <span class="dv">9</span>; <span class="co">// bytes written</span>
-}
-
-size_t deserialise (<span class="dt">const</span> <span class="dt">uint8_t</span> * in, <span class="kw">struct</span> foo * out)
-{
-    out-&gt;bar = in[<span class="dv">0</span>] | in[<span class="dv">1</span>] &lt;&lt; <span class="dv">8</span> | in[<span class="dv">2</span>] &lt;&lt; <span class="dv">16</span> | in[<span class="dv">3</span>] &lt;&lt; <span class="dv">24</span>;
-    out-&gt;baz = in[<span class="dv">4</span>];
-    out-&gt;quux[<span class="dv">0</span>] = in[<span class="dv">5</span>];
-    out-&gt;quux[<span class="dv">1</span>] = in[<span class="dv">6</span>];
-    out-&gt;quux[<span class="dv">2</span>] = in[<span class="dv">6</span>];
-    out-&gt;quux[<span class="dv">3</span>] = in[<span class="dv">8</span>];
-    <span class="kw">return</span> <span class="dv">9</span>; <span class="co">// bytes recovered</span>
-}</code></pre>
-<p>I’ve hard-coded lots of stuff there, all the indices and the bytes read and written. I’ve also put an obvious bug into the indices to show the checker working. The header file is also important, because it defines what the interface is to the Haskell side (or any other code).</p>
-<pre class="sourceCode cpp" include="includes/ffi-intro/foo.h"><code class="sourceCode cpp"><span class="ot">#include &lt;stdint.h&gt;</span>
-<span class="ot">#include &lt;string.h&gt;</span>
-
-<span class="ot">#ifdef __cplusplus</span>
-<span class="kw">extern</span> <span class="st">&quot;C&quot;</span> {
-<span class="ot">#endif</span>
-
-<span class="kw">typedef</span> <span class="kw">struct</span> foo
-{
-    <span class="dt">uint32_t</span> bar;
-    <span class="dt">int8_t</span>   baz;
-    <span class="dt">int8_t</span>   quux[<span class="dv">4</span>];
-} foo_t;
-
-size_t serialise   (<span class="dt">const</span> <span class="kw">struct</span> foo *, <span class="dt">uint8_t</span> *);
-size_t deserialise (<span class="dt">const</span> <span class="dt">uint8_t</span> *, <span class="kw">struct</span> foo *);
-
-<span class="ot">#ifdef __cplusplus</span>
-}
-<span class="ot">#endif</span></code></pre>
-<p>In particular the header file should define the structure if we want to tell Haskell how it works.</p>
-<p>As I said before, you need to ensure the <code>extern &quot;C&quot;</code> stuff is there otherwise you’ll fail at the linking stage. This means that polymorphic C++ code won’t work directly — you’ll have to write a C wrapper and attach to that.</p>
-<p>To run Haskell tests on C++ code we need the C++ object file. I’m using the filename <code>foo.cpp.o</code> instead of <code>foo.o</code> here to highlight an important point. If you’re compiling all this in the same directory as the Haskell code, and you’ve got a <code>foo.cpp</code> and a <code>Foo.hs</code> then GHC will likely clobber the object file you’ve already written — it doesn’t pay attention to difference in case. So for simplicity’s sake, either rename the Haskell source file so it’s not the same or rename the C/C++ object file so it’s not the same.</p>
-<pre><code>$ gcc -o foo.cpp.o -c foo.cpp</code></pre>
-<p>If you forgot to tell the compiler that these are C-compatible functions with the <code>extern</code> keyword then the output will look like this:</p>
-<pre><code>$ nm foo.cpp.o
-0000000000000148 s EH_frame0
-00000000000000b0 T __Z11deserialisePKhP3foo
-0000000000000190 S __Z11deserialisePKhP3foo.eh
-0000000000000000 T __Z9serialisePK3fooPh
-0000000000000160 S __Z9serialisePK3fooPh.eh</code></pre>
-<p>whereas we want them to look more like this:</p>
-<pre><code>$ nm foo.cpp.o
-0000000000000148 s EH_frame0
-00000000000000b0 T _deserialise
-0000000000000190 S _deserialise.eh
-0000000000000000 T _serialise
-0000000000000160 S _serialise.eh</code></pre>
-<h3 id="bridging-the-gap">Bridging the gap</h3>
-<p>Next we create a bridge between the two different languages. This is not difficult but can be a bit fiddly. I’m using Hsc2Hs here which is the simplest to understand but requires a bit of boilerplate. Essentially it’s a Haskell file with C-style interjections. The <code>hsc2hs</code> will process the C-like stuff and replace it with extra Haskell.</p>
-<pre class="sourceCode haskell" include="includes/ffi-intro/Foo.hsc"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE ForeignFunctionInterface #-}</span>
-<span class="kw">module</span> <span class="dt">Foo</span> <span class="kw">where</span>
-
-<span class="st">#</span><span class="kw">include</span><span class="st"> &quot;foo.h&quot;</span>
-
-<span class="kw">import </span><span class="dt">Foreign</span> <span class="kw">hiding</span> (unsafePerformIO)
-<span class="kw">import </span><span class="dt">Foreign.Marshal.Array</span>
-<span class="kw">import </span><span class="dt">Foreign.Storable</span>
-<span class="kw">import </span><span class="dt">System.IO.Unsafe</span> (unsafePerformIO)
-
-<span class="kw">data</span> <span class="dt">Foo</span> <span class="fu">=</span> <span class="dt">Foo</span>
-    {<span class="ot"> fooBar  ::</span> <span class="st">#{type uint32_t}</span>
-    ,<span class="ot"> fooBaz  ::</span> <span class="st">#{type int8_t}</span>
-    ,<span class="ot"> fooQuux ::</span> [<span class="st">#{type int8_t}]</span>
-    } <span class="kw">deriving</span> (<span class="dt">Eq</span>, <span class="dt">Show</span>)
-
-<span class="kw">instance</span> <span class="dt">Storable</span> <span class="dt">Foo</span> <span class="kw">where</span>
-    sizeOf _    <span class="fu">=</span> <span class="st">#{size foo_t}</span>
-    alignment _ <span class="fu">=</span> alignment (undefined<span class="ot"> ::</span> <span class="dt">Word32</span>)
-
-    peek ptr <span class="fu">=</span> <span class="kw">do</span>
-        r1 <span class="ot">&lt;-</span> <span class="st">#{peek foo_t, bar} ptr</span>
-        r2 <span class="ot">&lt;-</span> <span class="st">#{peek foo_t, baz} ptr</span>
-        r3 <span class="ot">&lt;-</span> peekArray <span class="dv">4</span> <span class="fu">$</span> <span class="st">#{ptr foo_t, quux} ptr</span>
-        return (<span class="dt">Foo</span> r1 r2 r3)
-
-    poke ptr (<span class="dt">Foo</span> r1 r2 r3) <span class="fu">=</span> <span class="kw">do</span>
-        <span class="st">#{poke foo_t, bar} ptr r1</span>
-        <span class="st">#{poke foo_t, baz} ptr r2</span>
-        pokeArray (<span class="st">#{ptr foo_t, quux} ptr) r3</span>
-
-<span class="kw">type</span> <span class="dt">Buffer</span> <span class="fu">=</span> [<span class="dt">Word8</span>]
-
-foreign <span class="kw">import </span>ccall &quot;foo.h serialise&quot;
-<span class="ot">    c_serialise ::</span> <span class="dt">Ptr</span> <span class="dt">Foo</span> <span class="ot">-&gt;</span> <span class="dt">Ptr</span> <span class="dt">Word8</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">Int</span>
-foreign <span class="kw">import </span>ccall &quot;foo.h deserialise&quot;
-<span class="ot">    c_deserialise ::</span> <span class="dt">Ptr</span> <span class="dt">Word8</span> <span class="ot">-&gt;</span> <span class="dt">Ptr</span> <span class="dt">Foo</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">Int</span>
-
-<span class="ot">serialise ::</span> <span class="dt">Foo</span> <span class="ot">-&gt;</span> <span class="dt">Buffer</span>
-serialise foo <span class="fu">=</span> unsafePerformIO <span class="fu">$</span> with foo <span class="fu">$</span>
-    \foo_ptr <span class="ot">-&gt;</span> allocaArray (sizeOf foo) <span class="fu">$</span>
-    \buf_ptr <span class="ot">-&gt;</span> <span class="kw">do</span>
-        sz <span class="ot">&lt;-</span> c_serialise foo_ptr buf_ptr
-        peekArray sz buf_ptr
-
-<span class="ot">deserialise ::</span> <span class="dt">Buffer</span> <span class="ot">-&gt;</span> <span class="dt">Foo</span>
-deserialise buf <span class="fu">=</span> unsafePerformIO <span class="fu">$</span> withArray buf <span class="fu">$</span>
-    \buf_ptr <span class="ot">-&gt;</span> allocaBytes (sizeOf (undefined<span class="ot"> ::</span> <span class="dt">Foo</span>)) <span class="fu">$</span>
-    \foo_ptr <span class="ot">-&gt;</span> <span class="kw">do</span>
-        _ <span class="ot">&lt;-</span> c_deserialise buf_ptr foo_ptr
-        peek foo_ptr</code></pre>
-<p>There’s a bit of personal choice as to how you interpret some of the datatypes in Haskell. You can consider a boolean value as <code>Bool</code> or as <code>Word8</code>; one more closely models the data but the other more closely models the semantics. In this case I use the <code>#{type}</code> directive which models the C type completely — the preprocessor can’t know that it’s a boolean being represented. I think this is better if you’re testing C/C++ code because it allows you to pass any valid number rather than only emitting <code>0</code> or <code>1</code>. If you want to model the semantics there are some utility functions like <code>toBool</code> and <code>fromBool</code> which will convert the data properly.</p>
-<p>See also <a href="http://therning.org/magnus/archives/315" title="Using hsc2hs to marshall C structs">Magnus Therning’s informative blog post about Hsc2Hs</a>. We compile like so:</p>
-<pre><code>$ hsc2hs Foo.hsc</code></pre>
-<p>Now we have a C object file created by GCC and a Haskell source file created by Hsc2Hs.</p>
-<ul>
-<li>foo.cpp.o</li>
-<li>Foo.hs</li>
-</ul>
-<p>If the marshalling in <code>Foo.hsc</code> is defined correctly you should be able to load the generated Haskell file into GHCi alongside the C++ object file to exercise it.</p>
-<pre><code>$ ghci Foo.hs foo.cpp.o</code></pre>
-<h3 id="some-code-to-test-with">Some code to test with</h3>
-<p>All that’s needed now is your tests. If the code you are testing does not maintain state then all the better: you can wrap the FFI calls in <code>unsafePerformIO</code> to convince the type system that they’re pure computations. The Haskell compiler doesn’t know the external code is pure so this is your promise to the type system that it <em>is</em> pure. If you are in fact lying (or in error) then you may find odd behaviour or crashes.</p>
-<pre class="sourceCode haskell" include="includes/ffi-intro/Main.hs"><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">Main</span> <span class="kw">where</span>
-
-<span class="kw">import </span><span class="dt">Foo</span>
-
-<span class="kw">import </span><span class="dt">Test.QuickCheck</span>
-
-<span class="kw">instance</span> <span class="dt">Arbitrary</span> <span class="dt">Foo</span> <span class="kw">where</span>
-    arbitrary <span class="fu">=</span> <span class="kw">do</span>
-        foobar  <span class="ot">&lt;-</span> arbitrary
-        foobaz  <span class="ot">&lt;-</span> arbitrary
-        fooquux <span class="ot">&lt;-</span> vector <span class="dv">4</span>
-        return (<span class="dt">Foo</span> foobar foobaz fooquux)
-
-prop_roundtrip <span class="fu">=</span> property <span class="fu">$</span>
-    \foo <span class="ot">-&gt;</span> foo <span class="fu">==</span> deserialise (serialise foo)
-
-main <span class="fu">=</span> quickCheck prop_roundtrip</code></pre>
-<p>Auto-generating tests is much easier now that you’ve dragged the code over from the dark side. Remember to include your precompiled object file on the command line when you’re building your Haskell code.</p>
-<pre><code>$ ghc --make Main.hs foo.cpp.o -o tests</code></pre>
-<p>Even better of course is to write a Makefile which will do everything like that for you:</p>
-<pre class="sourceCode makefile" include="includes/ffi-intro/Makefile"><code class="sourceCode makefile"><span class="dv">tests:</span><span class="dt"> Main.hs Foo.hs foo.cpp.o</span>
-	ghc --make Main foo.cpp.o -o tests
-
-<span class="dv">foo.cpp.o:</span><span class="dt"> foo.cpp foo.h</span>
-	gcc -c foo.cpp -o foo.cpp.o
-
-<span class="dv">Foo.hs:</span><span class="dt"> Foo.hsc foo.h</span>
-	hsc2hs -I. Foo.hsc
-
-<span class="dv">clean:</span>
-	rm -rf *.hi *.o tests Foo.hs</code></pre>
-<p>Let’s see how things fare when we attempt to check our roundtrip property.</p>
-<pre><code>$ make
-hsc2hs -I. Foo.hsc
-gcc -c foo.cpp -o foo.cpp.o
-ghc --make Main foo.cpp.o -o tests
-[1 of 2] Compiling Foo              ( Foo.hs, Foo.o )
-[2 of 2] Compiling Main             ( Main.hs, Main.o )
-Linking tests ...
-
-$ ./tests
-Falsifiable (after 1 test): 
-Foo {fooBar = 1, fooBaz = -1, fooQuux = [-1,-1,0,0]}</code></pre>
-<p>Oh dear! Not a great outcome there… But now you can load up GHCi and manually run that test to see what result you get when serialising and deserialising, examining the intermediate data and ultimately tracking down the bug.</p>]]></description>
-    <pubDate>Sat, 25 Jan 2014 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2014-01-25-quickcheck-tests-for-c-cpp-code.html</guid>
 </item>
 
     </channel> 
