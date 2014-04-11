@@ -6,8 +6,20 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 05 Apr 2014 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Fri, 11 Apr 2014 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Grammar of movement (reprise) &mdash; Contact Jam</title>
+    <link>http://dougalstanton.net/posts/2014-04-11-grammar-of-movement-reprise.html</link>
+    <description><![CDATA[<p>Last weekend I finally screwed my courage to the sticking place and went along to <a href="https://www.facebook.com/groups/493304847398335/" title="Glasgow Jam Facebook page">Glasgow Jam</a>, an afternoon of contact improvisation and artistic jamming of other kinds.</p>
+<p><a href="http://en.wikipedia.org/wiki/Contact_improvisation" title="Contact improvisation described, if not defined">Contact improvisation</a> is a dance form in the loosest sense. Wikipedia describes it as postmodern dance, which doesn’t help much. It’s interesting to me because it’s like a particular aspect of capoeira (the close-contact floor movement) without the martial intent. You move around and over and through each other, maintaining contact and exploring the way in which two (or more) people can interact. It’s entirely unchoreographed so you can just get stuck in there. There was a four-year-old child at the session too; it’s easy to do something if you’re willing to let yourself be loose. It reminded me a great deal of trust/contact exercises I’ve done with various drama groups over the years.</p>
+<p>The session lasted 3 hours without any particular structure after the warm-up period. People would dip in and out of the floor to take a break, get water, or even play instruments and paint as part of the “jam” experience. Apart from these off-the-cuff musical additions there was no soundtrack. We were dancing in silence which I found unsettling at times — and not easy to get into. There were also a lot of “serious” expressions from the participants; I really couldn’t tell whether enjoying oneself was verboten or whether this was just the face everyone used when they concentrated. Or maybe they were always bored when “contacting” with me…</p>
+<p>The session provided exactly the challenges that I expected it would. In light of my <a href="2014-04-05-grammar-of-movement.html" title="Grammar of movement: getting stuck in a rut">previous reflections on being stuck in a movement rut</a>, this was a great activity to highlight where my assumptions are. I had initially been worried that my instinct from capoeira would sneak in and I would pull someone’s leg out from under them without thinking! Thankfully that part of my capoeira game didn’t cross over but lots of other parts did. My biggest problem was being very uncomfortable touching the ground and otherwise being put into a vulnerable position. I was continually conscious of my need to be planted and in control — in short, not to surrender my trust to my dance partner. It took me over an hour of work to become comfortable with sitting on the ground, if you can believe that.</p>
+<p>This follows neatly what I had said previously about ungrammatical movements — I’m so ingrained in the capoeira way that even when I try it’s really hard to embrace touching the ground with other body parts. On top of that I often found myself being, if not openly hostile, then antagonistic. Instead of an improvised dance I was making it quite game-like to see how the other person would react. Again, I found this hard to avoid but I’m sure it got quite annoying after a while.</p>
+<p>Ultimately I had some problems trying to determine who the jam was for. It was billed as a participant-only event. There was no viewing gallery and it wasn’t a show. So in that respect it was for the dancers themselves — but it seemed so serious. There was no emotional interaction between people: no laughing, no whoops, no eye contact, no talking. I would like to return and see if I can improvise these more than anything else.</p>]]></description>
+    <pubDate>Fri, 11 Apr 2014 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2014-04-11-grammar-of-movement-reprise.html</guid>
+</item>
+<item>
     <title>Grammar of movement</title>
     <link>http://dougalstanton.net/posts/2014-04-05-grammar-of-movement.html</link>
     <description><![CDATA[<p>I wrote recently about <a href="/posts/2014-02-17-critical-appraisal-from-the-inside.html" title="My thoughts on Phil&#39;s performance at Conflux PITCH">Phil’s performance at the Conflux PITCH event</a> and how I had a hard time writing a meaningful critical appraisal. One of the issues was seeing the capoeira inside his performance and not being able to see past that.</p>
@@ -138,21 +150,6 @@
 <p>I’ve been out a few times at lunch for a short cycle but the path round the loch gets busy with dog walkers during the day. When the weather gets warmer still I hope to get out there properly. Many people go to the gym or the pool at lunch so getting out for a ride seems very reasonable. And maybe one day I’ll cycle a bit further on my commute — somewhere along the canal to the Falkirk Wheel maybe — before hopping on a train for home.</p>]]></description>
     <pubDate>Tue, 04 Feb 2014 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2014-02-04-settling-into-new-job.html</guid>
-</item>
-<item>
-    <title>Write code to write posts to write code</title>
-    <link>http://dougalstanton.net/posts/2014-01-28-write-code-to-write-posts-to-write-code.html</link>
-    <description><![CDATA[<p>There is a belief among certain programmers that if you’re having a problem with your code you should sit someone down and talk them through it — and that during the explanation your problem will become apparent to you. The very act of organising your thoughts enough to verbalise them will bring the issue to light.</p>
-<p>Some people take this to an extreme and believe that since the listener doesn’t need to be an active participant (they don’t need to prompt you or seek clarification, just listen) they don’t even need to be there at all. Or at least, they don’t need to be an actual person. And so was born <a href="http://en.wikipedia.org/wiki/Rubber_duck_debugging" title="Rubber duck debugging, defined by Wikipedia">rubber ducking</a> — the process of solving your problems by explaining them to a rubber duck. Now don’t anyone ever tell me that programmers have a problem talking to others!</p>
-<p>I mention this because writing about programming is a similarly intense way of making you really think through the code. But instead of making you solve your problems it brings you face to face with the ugliness of your code. In the past if I’ve been blogging about code I end up making little “cosmetic edits” after I’ve pasted code snippets into my document. As the edits get bolder the chance of introducing an inconsistency or a flaw into the code becomes higher. Before you know it you’re writing about beautiful but buggy code.</p>
-<p>The only way to stop this from happening is by making sure that the changes made to the code are compiled after every edit. For my last post about using QuickCheck with C and C++ I spent a fair amount of time writing an extra bit of function for the blogging software to include the source into post “by reference”:</p>
-<pre><code>```{.cpp include=&quot;path/to/file&quot;}
-```</code></pre>
-<p>Hakyll doesn’t do this as standard but luckily PanDoc (which is used for format conversion under the hood) is programmable and even includes this very example in the tutorial.</p>
-<p>This left me with another problem, which is that I needed to “compile” the page in order to preview it at all. So I ended up making more changes to compile draft documents and keep them separate from real blog posts. Basically I ended up doing a <em>lot</em> of faffing to write that last post.</p>
-<p>And after all that I still feel the urge to paste in the code that I used to do it. But then I’d inevitably want to fiddle, and so we end up where we started.</p>]]></description>
-    <pubDate>Tue, 28 Jan 2014 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2014-01-28-write-code-to-write-posts-to-write-code.html</guid>
 </item>
 
     </channel> 
