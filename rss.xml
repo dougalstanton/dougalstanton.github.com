@@ -6,8 +6,34 @@
         <description><![CDATA[A blog of sorts, unsorted.]]></description>
         <atom:link href="http://dougalstanton.net/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Tue, 15 Mar 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Fri, 18 Mar 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Basics and Fundamentals of Capoeira</title>
+    <link>http://dougalstanton.net/posts/2016-03-18-basics-and-fundamentals-of-capoeira.html</link>
+    <description><![CDATA[<p>In <a href="http://www.omnimovement.com/blog-2/" title="Fundamentals vs Basics: What’s the Difference and Why Does it Matter?">this article on fundamentals and basics</a> the author defines the two exactly for his own purposes and I think that has value so I’ll use those definitions here.</p>
+<ul>
+<li>Fundamental: Distance, Timing, Position</li>
+<li>Basics: Simple moves that everything else is built on</li>
+</ul>
+<p>Moves we covered in Mestre Marrom’s recent workshop:</p>
+<ul>
+<li>Negativa</li>
+<li>Role</li>
+<li>Queda de quattro</li>
+<li>Raba de arraia</li>
+<li>Escalomente (?)</li>
+<li>Cabecada</li>
+<li>Rasteira</li>
+<li>Mole (?)</li>
+<li>Chapa</li>
+</ul>
+<p>Of these the basic steps would be the <em>queda de quatro</em>, the <em>role</em> and the <em>negativa</em>, all escapes in some way. There’s probably some others that we did not cover at the weekend but that make sense as basics. There’s nothing inverted on that list, for example.</p>
+<p>Marrom was repeatedly emphasising the dynamic of attack and defend, enter and exit, which does link closely with the fundamental of Distance. Moving in and moving out again whenever there is a threat of an attack instead of getting into a ungraceful game of strike-counterstrike where nothing is effective and the game disintegrates.</p>
+<p>Timing is primary controlled by the rhythm of the bateria. The pace matches that rhythm in some way, though not necessarily one to one. Off-beat attacks are defined by the existence of the rhythm of the bateria.</p>]]></description>
+    <pubDate>Fri, 18 Mar 2016 00:00:00 UT</pubDate>
+    <guid>http://dougalstanton.net/posts/2016-03-18-basics-and-fundamentals-of-capoeira.html</guid>
+</item>
+<item>
     <title>Operant conditioning in martial arts training</title>
     <link>http://dougalstanton.net/posts/2016-03-15-operant-conditioning-in-martial-arts-training.html</link>
     <description><![CDATA[<p>This article, <a href="http://ymaa.com/articles/2015/1/the-practical-problem-of-teaching-self-defense">The Practical Problem of Teaching Self Defense</a> by Rory Miller, was recently posted on <a href="https://www.reddit.com/r/martialarts/comments/4ajbis/rory_miller_article_on_practical_problems_when/">the /r/martialarts subreddit</a>.</p>
@@ -178,17 +204,6 @@
 <p>The other side has only a forward-threaded section: there is no room for a lockring. Opinions differ as to whether this is a bad thing or not. If the cog is wound tightly enough then it shouldn’t be, and each pedal stroke under normal use will tighten the cog further. Personally I would prefer the safety of a lockring and I would have put my new 18T cog on the side which fits the lockring… except I couldn’t get the old 16T off first! It’s had a lot of hard pushing and is quite firmly locked in place.</p>]]></description>
     <pubDate>Sun, 03 May 2015 00:00:00 UT</pubDate>
     <guid>http://dougalstanton.net/posts/2015-05-03-lower-gear-on-the-fuji-for-edinburghs-hills.html</guid>
-</item>
-<item>
-    <title>Char is (probably) not short for Character</title>
-    <link>http://dougalstanton.net/posts/2015-05-02-char-is-not-short-for-character.html</link>
-    <description><![CDATA[<p>I was reading an online discussion recently about the pronunciation of “char” as it appears in C source code. For the non-programmers, the keyword “char” is used to indicate a character (eg, letter or number) in code, like this:</p>
-<pre class="sourceCode c"><code class="sourceCode c"><span class="dt">char</span> my_initial = &#39;D&#39;;</code></pre>
-<p>Some people pronounce this keyword as it appears, <em>char</em> (as in to blacken by burning). Others pronounce it more like <em>car</em> with a hard /k/ since it’s short for <em>character</em>. But it occured to me that the vowel sound in <em>car</em> and in <em>character</em> are different — at least they are in my accent!</p>
-<p>I looked them up and they appear different in IPA rendering too: /ɑ/ in <em>car</em> and /a/ in <em>character</em>.</p>
-<p>I’m personally fond of pronouncing it like <em>char</em>, but if I wanted to go with the alternative could I learn to pronounce <em>car</em> with a different vowel sound? How weird would I sound?</p>]]></description>
-    <pubDate>Sat, 02 May 2015 00:00:00 UT</pubDate>
-    <guid>http://dougalstanton.net/posts/2015-05-02-char-is-not-short-for-character.html</guid>
 </item>
 
     </channel> 
