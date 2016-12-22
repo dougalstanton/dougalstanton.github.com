@@ -8,8 +8,25 @@
         <name>Dougal Stanton</name>
         <email>blog@dougalstanton.net</email>
     </author>
-    <updated>2016-09-07T00:00:00Z</updated>
+    <updated>2016-12-22T00:00:00Z</updated>
     <entry>
+    <title>Sprinting faster than a speeding bullet journal</title>
+    <link href="http://dougalstanton.net/posts/2016-12-22-sprinting-faster-than-a-speeding-bullet.html" />
+    <id>http://dougalstanton.net/posts/2016-12-22-sprinting-faster-than-a-speeding-bullet.html</id>
+    <published>2016-12-22T00:00:00Z</published>
+    <updated>2016-12-22T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>I stumbled across <a href="http://bulletjournal.com" title="Bullet Journal explained">bullet journalling</a> recently, and became quickly fascinated with the system as I understood it. I have not used it for anything, and I suspect that I might never use it in its fullest sense. But some of the core ideas hidden in there are really great. But I’ve not seen them written about explicitly and separately from the Bullet Journal Method (Tee Em) so I wonder if other people care, or find this fascinating?</p>
+<p>When I have played with notebooks I have always had a terrible fear about <strong>not leaving enough space for things</strong>. This is the first thing which bullet journal solves. It encourages you to number pages as you use them, then put entries in an index. If one entry is split across two page runs, you just put them both in the index. Or you can just put a mark at the bottom of the page to indicate that this entry continues on page X.</p>
+<p>All those notebooks I have with chunks of blank space between useful items and the answer was so obvious.</p>
+<p>This system of indexing and cross-referencing of page numbers is the start of the real underlying power of bullet journalling. It allows you to use the capacity of the book to the fullest and discourages wasted pages. It is reminiscent of the way computers allocate data, which leads me into my next thought.</p>
+<p>In order to minimise wastage in bullet journalling it encourages a just-in-time system. You allocate each day’s entry-space as you get to it, instead of drawing boxes for each day a week in advance. You may never use those boxes.</p>
+<p>Each day you can score off completed items or move unfinished ones to the following day or “later”. Each month you can do the same. These stages of stopping and copying are also reminiscent of computer memory management, by creating a new day, week or month out of the half-relevant remnants of the previous one.</p>
+<p>Between pointers, memory pools and garbage collection there’s a lot in a Bullet Journal that should be familiar to the computer scientist. I wonder if there’s anything else that’s been invented for data management inside our machines that’s similarly valuable with pen and paper.</p>
+<hr />
+<p>The title comes from the transfer of tasks from one day to the next, or pushing them to a log to be examined later. In bullet journaling it’s called the “future log”… but if you imagine each day as a Sprint the same thing is called a Backlog under the Agile system.</p>
+<p>Is Bullet Journal an application of Agile management applied to your own life, using the machinery of garbage-collected memory management on the underlying notebook? Would it help anyone if I told them it seemed like it. I have not examined these thoughts in the closest of detail but the notions entertained me greatly.</p>]]></summary>
+</entry>
+<entry>
     <title>New bike day: Genesis Croix de Fer custom build</title>
     <link href="http://dougalstanton.net/posts/2016-09-07-new-bike-day-genesis-croix-de-fer.html" />
     <id>http://dougalstanton.net/posts/2016-09-07-new-bike-day-genesis-croix-de-fer.html</id>
@@ -205,18 +222,6 @@
     <summary type="html"><![CDATA[<p>In a few short days I’m going to make my way to <a href="http://www.knockengorroch.org.uk" title="Knockengorroch festival, 21-24 May">Knockengorroch World Ceilidh 2015</a> by bike. I’ve taken Thursday, Friday and Monday off work to reduce the anxiety of the journey but I’ve still managed to convince myself that I’m not up to the challenge and reduced my journey further.</p>
 <p>I had originally wanted to cycle there in two stages and to camp somewhere in between on the Thursday night. But now I’ve just decided to take the train to Ayr and travel the remainder of the distance by bike in one day — which is only 22 miles. This is the distance between work and home which I’ve done several times now and though I will be doing it laden with camping gear I will also have many hours to spare. Google Maps reckons I can do it in two and a half hours. Maybe it’ll be 3 hours in the end as Google doesn’t really know about hills or luggage.</p>
 <p>I’ve had a trial run with panniers and tent loaded on the bike. I went for a sedate few miles on the NEPN in the Leith end of town. Tonight I will try to pack everything properly to work out what I need and where it should go.</p>]]></summary>
-</entry>
-<entry>
-    <title>Reflections on using the arms in capoeira</title>
-    <link href="http://dougalstanton.net/posts/2015-05-10-reflections-on-arm-use-in-capoeira.html" />
-    <id>http://dougalstanton.net/posts/2015-05-10-reflections-on-arm-use-in-capoeira.html</id>
-    <published>2015-05-10T00:00:00Z</published>
-    <updated>2015-05-10T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<p>Since starting BJJ it’s been harder to remain disconnected from people when playing capoeira. Either I can fight this or embrace it and see where it leads. So what does it mean to be all “touchy touchy” in capoeira? Can I make something positive out of this?</p>
-<p>Against a <em>meia lua</em> or <em>rabo de arraia</em> it makes sense to have contact with the kicking leg while moving out of the way. In particular slower kicks which can be easily reversed to kick from different directions. Ducking under a meia lua puts the face quite close to the kicking leg and it’s not uncommon for the person to shift their weight and come back with the foot right towards your face.</p>
-<p>The traditional defence is a somewhat ambiguous “arms held out in midair” behaviour which means the hands are at the right height to prevent incoming strikes but are not very strong.</p>
-<p>I wonder whether a better approach is a pre-emptive touch or “frame” to maintain the right distance and a sense of safety. Depending on the game it could be a back-of-the-hand, a bladed hand, a forearm or upper arm. The key difference between this and the normal defence is that the “acceleration” time of a strike is zero. The strength of the kick comes from the momentum when it strikes — if there is no distance before impact then the kick becomes a push and <em>meia lua</em> and <em>rabo de arraia</em> are not push kicks and have no strength like that.</p>
-<p>Another detail of course is a tactical one. If you’ve got a hand on a person’s limb then you don’t need to watch it to know where it is and what direction it’s moving. You can spare your eyes for other places.</p>]]></summary>
 </entry>
 
 </feed>
